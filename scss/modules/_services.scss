@@ -1,0 +1,302 @@
+#services {
+    margin-bottom: 6rem;
+}
+
+.service-list {
+
+    h2 {
+        font-size: 2.75rem;
+        font-weight: 100;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333645;
+        letter-spacing: .4px;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        // gap: 30px;
+
+        .service {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .service {
+            width: calc(33.33%);
+        }
+    }
+}
+
+.service:nth-child(n+5) {
+    @media (min-width: 768px) {
+        width: calc(50%);
+    }
+
+    @media (min-width: 1261px) {
+        width: calc(25%);
+    }
+}
+
+.view-all-work {
+    padding-top: 15px;
+    font-size: 1.5rem;
+}
+
+.service {
+    padding: 0 15px;
+    margin-top: 30px;
+
+    .service-inner {
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+        position: relative;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: all .5s ease;
+        top: 0;
+
+        &:hover {
+            color: #fff;
+            top: -10px;
+            border-color: transparent !important;
+            background-color: #67809f;
+
+            button {
+                background-color: #fff;
+                border-color: #fff;
+                color: #67809f;
+            }
+
+            .icon-container {
+                background-color: #fff !important;
+                border-color: #fff !important;
+
+                span {
+                    color: #67809f !important;
+                }
+            }
+
+
+        }
+
+        h3 {
+            font-weight: lighter;
+            font-size: x-large;
+        }
+
+        p {
+            font-size: .8125rem;
+            line-height: 1.375rem;
+            margin-bottom: 13px;
+            font-weight: 400;
+        }
+
+        button {
+            font-size: medium;
+            padding: 15px 20px;
+            height: auto;
+            margin-top: auto;
+        }
+    }
+
+
+
+}
+
+#it:hover .service-inner {
+    color: #fff;
+    top: -10px;
+    border-color: transparent !important;
+    background-color: #4183d7 !important;
+
+    button {
+        background-color: #fff;
+        border-color: #fff;
+        color: #4183d7 !important;
+    }
+
+    .icon-container {
+        background-color: #fff !important;
+        border-color: #fff !important;
+
+        span {
+            color: #4183d7 !important;
+        }
+    }
+
+}
+
+#digital:hover .service-inner {
+    color: #fff;
+    top: -10px;
+    border-color: transparent !important;
+    background-color: #2ecc71;
+
+    button {
+        background-color: #fff;
+        border-color: #fff;
+        color: #2ecc71;
+    }
+
+    .icon-container {
+        background-color: #fff !important;
+        border-color: #fff !important;
+
+        span {
+            color: #2ecc71 !important;
+        }
+    }
+
+}
+
+#telecoms:hover .service-inner {
+    color: #fff;
+    top: -10px;
+    border-color: transparent !important;
+    background-color: #d64541;
+
+    button {
+        background-color: #fff;
+        border-color: #fff;
+        color: #d64541;
+    }
+
+    .icon-container {
+        background-color: #fff !important;
+        border-color: #fff !important;
+
+        span {
+            color: #d64541 !important;
+        }
+    }
+
+}
+
+
+#web:hover .service-inner {
+    color: #fff;
+    top: -10px;
+    border-color: transparent !important;
+    background-color: #926fb1;
+
+    button {
+        background-color: #fff;
+        border-color: #fff;
+        color: #926fb1;
+    }
+
+    .icon-container {
+        background-color: #fff !important;
+        border-color: #fff !important;
+
+        span {
+            color: #926fb1 !important;
+        }
+    }
+
+}
+
+#security:hover .service-inner {
+    color: #fff;
+    top: -10px;
+    border-color: transparent !important;
+    background-color: #f62459;
+
+    button {
+        background-color: #fff;
+        border-color: #fff;
+        color: #f62459;
+    }
+
+    .icon-container {
+        background-color: #fff !important;
+        border-color: #fff !important;
+
+        span {
+            color: #f62459 !important;
+        }
+    }
+
+}
+
+#developer:hover .service-inner {
+    color: #fff;
+    top: -10px;
+    border-color: transparent !important;
+    background-color: #ce4125;
+
+    button {
+        background-color: #fff;
+        border-color: #fff;
+        color: #ce4125;
+    }
+
+    .icon-container {
+        background-color: #fff !important;
+        border-color: #fff !important;
+
+        span {
+            color: #ce4125 !important;
+        }
+    }
+
+}
+
+.icon-container {
+    padding: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+    width: fit-content;
+    margin-inline: auto;
+
+    span {
+        font-size: 1.75rem;
+        color: #fff;
+    }
+}
+
+.software {
+    background-color: #f7b322;
+    border-color: #f7b322;
+}
+
+.it {
+    background-color: #4183d7;
+    border-color: #4183d7;
+}
+
+.digital {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+
+.telecoms {
+    background-color: #d64541;
+    border-color: #d64541;
+}
+
+.web {
+    background-color: #926fb1;
+    border-color: #926fb1;
+}
+
+.security {
+    background-color: #f62459;
+    border-color: #f62459;
+}
+
+.developer {
+    background-color: #ce4125;
+    border-color: #ce4125;
+}

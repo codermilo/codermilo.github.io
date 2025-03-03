@@ -1,0 +1,126 @@
+#banner {
+    color: white;
+    letter-spacing: .4px;
+    position: relative;
+
+    .banner__pagination {
+        position: absolute;
+        bottom: 44px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 1.25rem;
+
+        .dot {
+
+            span {
+                display: block;
+                width: 12px;
+                height: 12px;
+                background-color: #ffffff8c;
+                border-radius: 50%;
+            }
+        }
+
+        .pag--active {
+            span {
+                background-color: #fff;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -7px;
+                    left: -7px;
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                }
+            }
+        }
+    }
+
+    .banner-item {
+        // background-color: #000;
+        min-height: 550px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        //text-align: center;
+        padding: 0 15px;
+        text-align: center;
+
+        h1 {
+            font-size: 2.5rem !important;
+            line-height: 3rem !important;
+        }
+
+
+
+        @media (min-width: 768px) {
+            align-items: start;
+            //padding: 0 6rem;
+            text-align: left;
+
+            h1 {
+                font-size: 4rem !important;
+                line-height: 5rem !important;
+                padding-right: 2rem;
+            }
+
+            h3 {
+                font-size: 1.5rem !important;
+                line-height: 2.25rem !important;
+            }
+
+            .btn {
+                margin: 0 auto 0 0;
+            }
+
+            .banner__pagination {
+                margin-inline: auto;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            padding: 5rem 0 5rem 0;
+
+        }
+
+        .banner-item__img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            // opacity: .5;
+            z-index: -1;
+            filter: brightness(.55);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 3rem;
+            margin: 0 0 1.25rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+        }
+
+        .btn {
+            margin-top: 2rem !important;
+
+            &:hover {
+                background-color: #7e57a0;
+                border-color: #7e57a0;
+                cursor: pointer;
+            }
+        }
+    }
+}

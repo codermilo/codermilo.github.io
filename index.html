@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netmatters Homepage</title>
+    <link rel="stylesheet" href="assets/icomoon/style.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="header">
+        <header>
+            <div class="inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-logo">
+                            <a href="#">
+                                <img src="img/f-logo.webp" alt="">
+                            </a>
+                        </div>
+                        <div class="phone-link mobile-visible">
+                            <a href="#">
+                                <span class="icon-phone"></span>
+                            </a>
+                        </div>
+
+                        <button class="support-btn"><span class="icon-search"></span>Support</button>
+
+                        <button class="contact-btn"><span class="icon-search"></span>Contact</button>
+
+                        <!-- Tablet Search Bar -->
+                        <div class="tablet-search-bar mobile-hidden">
+                            <form action="#">
+                                <input type="text" class="search-bar" placeholder="Search..." id="search-input"
+                                    name="keyword">
+                                <button type="submit" id="search-submit">
+                                    <div class="">
+                                        <span class="icon-search"></span>
+                                    </div>
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="menu-btn">
+                            <button class="btn ">
+                                <div class="hamburger-container">
+                                    <span> </span>
+                                    <span> </span>
+                                    <span> </span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Search Bar -->
+                    <div class="mobile-search-bar container mobile-visible">
+                        <form action="#">
+                            <!-- <label for="search-input" class="hidden">Search...</label> -->
+                            <input type="text" class="search-bar" placeholder="Search..." id="search-input"
+                                name="keyword">
+                            <button type="submit" id="search-submit">
+                                <div class="">
+                                    <span class="icon-search"></span>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- <div class="sidebar">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon-laptop" style="color: #67809f;"></span> <br>
+                        <small>Bespoke</small> <br>
+                        Software
+                    </a>
+                    <div class="sub-menu--container">
+                        <ul class="sub-menu">
+                            <li><a href="#">Bespoke CRM</a></li>
+                            <li><a href="#">Business Automation</a></li>
+                            <li><a href="#">Software Integrations</a></li>
+                            <li><a href="#">Mobile App Development</a></li>
+                            <li><a href="#">Bespoke Databases</a></li>
+                            <li><a href="#">Sharepoint Development</a></li>
+                            <li><a href="#">Operational Systems</a></li>
+                            <li><a href="#">Business Central Implementation</a></li>
+                            <li><a href="#">Internet of Things (IOT) Software</a></li>
+                            <li><a href="#">Intranet Development</a></li>
+                            <li><a href="#">Customer Portal Development</a></li>
+                            <li><a href="#">Reporting Hub</a></li>
+                            <li><a href="#">SAP S/4HANA Management</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon-display" style="color: #4183d7;"></span> <br>
+                        <small>It</small> <br>
+                        Support
+                    </a>
+                    <div class="sub-menu--container">
+                        <ul class="sub-menu">
+                            <li><a href="#">Managed IT Support</a></li>
+                            <li><a href="#">Business IT Support</a></li>
+                            <li><a href="#">Office 365 For Business</a></li>
+                            <li><a href="#">IT Consultancy</a></li>
+                            <li><a href="#">Cloud Service Provider</a></li>
+                            <li><a href="#">Data Backup & Disaster Recovery</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon-stats-bars" style="color: #2ecc71;"></span> <br>
+                        <small>Digital</small> <br>
+                        Marketing
+                    </a>
+                    <div class="sub-menu--container">
+                        <ul class="sub-menu">
+                            <li><a href="#">Managed IT Support</a></li>
+                            <li><a href="#">Business IT Support</a></li>
+                            <li><a href="#">Office 365 For Business</a></li>
+                            <li><a href="#">IT Consultancy</a></li>
+                            <li><a href="#">Cloud Service Provider</a></li>
+                            <li><a href="#">Data Backup & Disaster Recovery</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon-phone" style="color: #d64541;"></span> <br>
+                        <small>Telecoms</small> <br>
+                        Services
+                    </a>
+                    <div class="sub-menu--container">
+                        <ul class="sub-menu">
+                            <li><a href="#">Managed IT Support</a></li>
+                            <li><a href="#">Business IT Support</a></li>
+                            <li><a href="#">Office 365 For Business</a></li>
+                            <li><a href="#">IT Consultancy</a></li>
+                            <li><a href="#">Cloud Service Provider</a></li>
+                            <li><a href="#">Data Backup & Disaster Recovery</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon-embed2" style="color: #926fb1;"></span> <br>
+                        <small>Web</small> <br>
+                        Design
+                    </a>
+                    <div class="sub-menu--container">
+                        <ul class="sub-menu">
+                            <li><a href="#">Bespoke Website Design</a></li>
+                            <li><a href="#">Ecommerce Website</a></li>
+                            <li><a href="#">Pay Monthly Websites</a></li>
+                            <li><a href="#">Brand & Design</a></li>
+                            <li><a href="#">Mobile App Development</a></li>
+                            <li><a href="#">Web Hosting</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon-shield" style="color: #f62459;"></span> <br>
+                        <small>Cyber</small> <br>
+                        Security
+                    </a>
+                    <div class="sub-menu--container">
+                        <ul class="sub-menu">
+                            <li><a href="#">Cyber Security Assessment</a></li>
+                            <li><a href="#">Cyber Security Management</a></li>
+                            <li><a href="#">Cyber Penetration Testing</a></li>
+                            <li><a href="#">Cyber Essentials Certification</a></li>
+                            <li><a href="#">PCI Compliance</a></li>
+                            <li><a href="#">Hacking Prevention</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon-rocket" style="color: #ce4125;"></span> <br>
+                        <small>Developer</small> <br>
+                        Course
+                    </a>
+                    <div class="sub-menu--container">
+                        <ul class="sub-menu">
+                            <li><a href="#">Train For A Career In Tech</a></li>
+                            <li><a href="#">Skills Bootcamp</a></li>
+                            <li><a href="#">Scion Scheme Frequently Asked Questions</a></li>
+                            <li><a href="#">Scion Collaborations</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="second-menu">
+                <li>
+                    <a href="#">Our Work</a>
+                    <div class="sub-menu--container">
+                        <div class="sub-menu">
+                            <li>Case Studies</li>
+                        </div>
+                    </div>
+                </li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div> -->
+
+    <main class="">
+
+        <!-- Main Navigation Bar -->
+        <!-- *Hidden at Smaller Device Sizes* -->
+
+        <div class="main-navigation brand-bg">
+
+            <ul class="container">
+                <li class="software">
+                    <a href="#">
+                        <div class="main-nav__item">
+                            <span class="icon-laptop"></span>
+                            <h4>
+                                <small>Bespoke</small> <br> Software
+                            </h4>
+                        </div>
+                    </a>
+                    <div class="main-nav__sub-menu__container">
+
+                        <div class="main-nav__sub-menu container">
+                            <h3>Our Bespoke Software Services</h3>
+                            <div class="sub-menu__inner">
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span> Bespoke CRM</li>
+                                        <li><span></span> Mobile App Development</li>
+                                        <li><span></span> Operational Systems</li>
+                                        <li><span></span> Intranet Development</li>
+                                        <li><span></span> SAP S/4HANA Management</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Business Automation</li>
+                                        <li><span></span>Bespoke Databases</li>
+                                        <li><span></span>Business Central Implementation</li>
+                                        <li><span></span>Customer Portal Development</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Software Integrations</li>
+                                        <li><span></span>Sharepoint Development</li>
+                                        <li><span></span>Internet of Things (IoT) Software</li>
+                                        <li><span></span>Reporting Hub</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="it">
+                    <a href="#">
+                        <div class="main-nav__item">
+                            <span class="icon-display"></span>
+                            <h4>
+                                <small>IT</small> <br> Support
+                            </h4>
+                        </div>
+                    </a>
+                    <div class="main-nav__sub-menu__container">
+
+                        <div class="main-nav__sub-menu container">
+                            <h3>Our IT Support Services</h3>
+                            <div class="sub-menu__inner">
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Managed IT Support</li>
+                                        <li><span></span>IT Consultancy</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Business IT Support</li>
+                                        <li><span></span>Cloud Service Provider</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Office 365 For Business</li>
+                                        <li><span></span>Data Backup & Disaster Recovery</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="digital">
+                    <a href="#">
+                        <div class="main-nav__item">
+                            <span class="icon-stats-bars"></span>
+                            <h4>
+                                <small>Digital</small> <br>Marketing
+                            </h4>
+                        </div>
+                    </a>
+                    <div class="main-nav__sub-menu__container">
+
+                        <div class="main-nav__sub-menu container">
+                            <h3>Our Digital Marketing Services</h3>
+                            <div class="sub-menu__inner">
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Search Engine Optimisation (SEO)</li>
+                                        <li><span></span>Email Marketing</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Pay Per Click Advertising (PPC)</li>
+                                        <li><span></span>Social Media Marketing</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Conversion Rate Optimisation (CRO)</li>
+                                        <li><span></span>Content Marketing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="telecoms">
+                    <a href="#">
+                        <div class="main-nav__item ">
+                            <span class="icon-phone"></span>
+                            <h4>
+                                <small>Telecoms</small> <br>Services
+                            </h4>
+                        </div>
+                    </a>
+                    <div class="main-nav__sub-menu__container">
+
+                        <div class="main-nav__sub-menu container">
+                            <h3>Our Telecoms Services</h3>
+                            <div class="sub-menu__inner">
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Business Mobile</li>
+                                        <li><span></span>Business Broadband</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Hosted VoIP Provider</li>
+                                        <li><span></span>Leased Lines Provider</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Business VoIP Systems</li>
+                                        <li><span></span>3CX Systems</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="web">
+                    <a href="#">
+                        <div class="main-nav__item">
+                            <span class="icon-embed2"></span>
+                            <h4>
+                                <small>Web</small> <br>Design
+                            </h4>
+                        </div>
+                    </a>
+                    <div class="main-nav__sub-menu__container">
+
+                        <div class="main-nav__sub-menu container">
+                            <h3>Our Web Design Services</h3>
+                            <div class="sub-menu__inner">
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Bespoke Website Design</li>
+                                        <li><span></span>Branding & Design</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>eCommerce Website Design</li>
+                                        <li><span></span>Mobile App Development</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Pay Monthly Websites</li>
+                                        <li><span></span>Web Hosting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="cyber">
+                    <a href="#">
+                        <div class="main-nav__item">
+                            <span class="icon-shield"></span>
+                            <h4>
+                                <small>Cyber</small> <br>Security
+                            </h4>
+                        </div>
+                    </a>
+                    <div class="main-nav__sub-menu__container">
+
+                        <div class="main-nav__sub-menu container">
+                            <h3>Our Cyber Security Services</h3>
+                            <div class="sub-menu__inner">
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Cyber Security Assessment</li>
+                                        <li><span></span>Cyber Essentials Certification</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Cyber Security Management</li>
+                                        <li><span></span>PCI Compliance</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Cyber Penetration Testing</li>
+                                        <li><span></span>Hacking Prevention</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="developer">
+                    <a href="#">
+                        <div class="main-nav__item">
+                            <span class="icon-rocket"></span>
+                            <h4>
+                                <small>Developer</small> <br>Course
+                            </h4>
+                        </div>
+                    </a>
+                    <div class="main-nav__sub-menu__container">
+
+                        <div class="main-nav__sub-menu container">
+                            <h3>Our Developer Course Services</h3>
+                            <div class="sub-menu__inner">
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Train For A Career In Tech</li>
+                                        <li><span></span>Scion Collaborators</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Skills Bootcamp</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><span></span>Scion Scheme Frequently Asked Questions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- Banner Section -->
+        <div id="banner">
+            <div class="banner-carousel">
+                <div class="banner-item">
+                    <div class="banner-item__img">
+
+                        <img src="https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-YLei.png"
+                            class="img-cover-modern"
+                            alt="The East Of England's Leading Technology Company Norwich, Norfolk, Cambridge, North London, Essex, Hertfordshire, Enfield">
+                    </div>
+                    <div class="banner__text-content container">
+                        <h1 class="h1">
+                            The East Of England's Leading Technology Company
+                        </h1>
+
+                        <h3>Performance-driven digital and technology services<br>
+                            with complete transparency.</h3>
+
+                        <a href="https://www.netmatters.co.uk/why-choose-us" class="btn">
+                            Why Choose Us?
+                            <span class="icon-arrow-right2"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner__pagination">
+                    <div class="dot pag--active">
+                        <span> </span>
+                    </div>
+                    <div class="dot">
+                        <span> </span>
+                    </div>
+                    <div class="dot">
+                        <span> </span>
+                    </div>
+                    <div class="dot">
+                        <span> </span>
+                    </div>
+                    <div class="dot">
+                        <span> </span>
+                    </div>
+                    <div class="dot">
+                        <span> </span>
+                    </div>
+                    <div class="dot">
+                        <span> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Section -->
+        <div id="services">
+            <div class="container">
+                <div class="service-list">
+                    <div class="row space-between">
+                        <h2>Our Services</h2>
+                        <a href="#">
+                            <h2 class="mobile-hidden link">View Our Work <span class="icon-arrow-right2"></span></h2>
+                        </a>
+                    </div>
+                    <div class="service"  id="software">
+                        <a class="service-inner" href="#">
+                            <div class="icon-container" style="border-color: #67809f; background-color: #67809f;">
+                                <span class="icon-laptop"></span>
+                            </div>
+                            <h3>Bespoke Software</h3>
+                            <p>Bespoke software solutions for all your business needs including integrations and
+                                reporting.</p>
+                            <button class="btn software">Read more</button>
+                        </a>
+                    </div>
+                    <div class="service"  id="it">
+                        <a class="service-inner" href="#">
+                            <div class="icon-container it">
+                                <span class="icon-display"></span>
+                            </div>
+                            <h3>IT Support</h3>
+                            <p>Fully managed IT support and consultancy packages tailored to meet your exact business
+                                needs.
+                            </p>
+                            <button class="btn it">Read more</button>
+                        </a>
+                    </div>
+                    <div class="service"  id="digital">
+                        <a class="service-inner" href="#">
+                            <div class="icon-container digital">
+                                <span class="icon-stats-bars"></span>
+                            </div>
+                            <h3>Digital Marketing</h3>
+                            <p>
+                                Driven brand awareness & ROI through creative digital marketing campaigns.
+                            </p>
+                            <button class="btn digital">Read more</button>
+                        </a>
+                    </div>
+                    <div class="service"  id="telecoms">
+                        <a class="service-inner" href="#">
+                            <div class="icon-container telecoms">
+                                <span class="icon-phone"></span>
+                            </div>
+                            <h3>Telecoms Services</h3>
+                            <p>Business telephony solutions including mobile & connectivity solutions.
+                            </p>
+                            <button class="btn telecoms">Read more</button>
+                        </a>
+                    </div>
+                    <div class="service"  id="web">
+                        <a class="service-inner" href="#">
+                            <div class="icon-container web">
+                                <span class="icon-embed2"></span>
+                            </div>
+                            <h3>Web Design</h3>
+                            <p>
+                                User-centric design for businesses looking to make a lasting impression.
+                            </p>
+                            <button class="btn web">Read more</button>
+                        </a>
+                    </div>
+                    <div class="service"  id="security">
+                        <a class="service-inner" href="#">
+                            <div class="icon-container security">
+                                <span class="icon-shield"></span>
+                            </div>
+                            <h3>Cyber Security</h3>
+                            <p>Prevention, testing, consultancy & breach management services.
+                            </p>
+                            <button class="btn security">Read more</button>
+                        </a>
+                    </div>
+                    <div class="service"  id="developer">
+                        <a class="service-inner" href="#">
+                            <div class="icon-container developer">
+                                <span class="icon-rocket"></span>
+                            </div>
+                            <h3>Developer Training</h3>
+                            <p>
+                                Web design & software training courses designed to secure a job in tech.</p>
+                            <button class="btn developer">Read more</button>
+                        </a>
+                    </div>
+                    <div class="view-all-work mobile-visible">
+                        <a href="#">
+                            <h3 class="link">View Our Work <span class="icon-arrow-right2"></span></h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Partners Slideshow Section -->
+
+        <div class="slideshow__container">
+            <div class="partners slideshow">
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/norfolk-carbon-charter.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/norfolk-carbon-charter.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/norfolk-carbon-charter.jpg"
+                            alt="Norfolk Carbon Charter" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/PPC_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/PPC_logo.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/PPC_logo.jpg" alt="PPC Logo"
+                            class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/princess-royal-training.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/princess-royal-training.png"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/princess-royal-training.png"
+                            alt="Princess Royal Training" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/future-50.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/future-50.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/future-50.jpg"
+                            alt="Future 50" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/qms.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/qms.png"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/qms.png" alt="QMS"
+                            class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/iso-27001.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/iso-27001.png"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/iso-27001.png"
+                            alt="ISO 27001" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/skills-of-tomorrow.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/skills-of-tomorrow.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/skills-of-tomorrow.jpg"
+                            alt="Skills Of tomorrow" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/cyber-essentials-colour.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/cyber-essentials-colour.jpg"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/cyber-essentials-colour.jpg"
+                            alt="Cyber Essentials" class="coloured" style="opacity: 1;">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/google-partner.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/google-partner.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/google-partner.jpg"
+                            alt="Google Partners" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/GBC-colour.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/GBC-colour.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/GBC-colour.png"
+                            alt="Good Business Charter" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/norfolk_prohelp.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/norfolk_prohelp.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/norfolk_prohelp.png"
+                            alt="Norfolk Prohelp logo" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/investing-in-future-growth.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/investing-in-future-growth.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/investing-in-future-growth.jpg"
+                            alt="Investing In Future Growth" class="coloured">
+                    </picture>
+                </div>
+
+            </div>
+            <div class="partners slideshow">
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/norfolk-carbon-charter.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/norfolk-carbon-charter.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/norfolk-carbon-charter.jpg"
+                            alt="Norfolk Carbon Charter" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/PPC_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/PPC_logo.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/PPC_logo.jpg" alt="PPC Logo"
+                            class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/princess-royal-training.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/princess-royal-training.png"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/princess-royal-training.png"
+                            alt="Princess Royal Training" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/future-50.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/future-50.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/future-50.jpg"
+                            alt="Future 50" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/qms.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/qms.png"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/qms.png" alt="QMS"
+                            class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/iso-27001.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/iso-27001.png"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/iso-27001.png"
+                            alt="ISO 27001" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/skills-of-tomorrow.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/skills-of-tomorrow.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/skills-of-tomorrow.jpg"
+                            alt="Skills Of tomorrow" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/cyber-essentials-colour.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/cyber-essentials-colour.jpg"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/cyber-essentials-colour.jpg"
+                            alt="Cyber Essentials" class="coloured" style="opacity: 1;">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/google-partner.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/google-partner.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/google-partner.jpg"
+                            alt="Google Partners" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/GBC-colour.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/GBC-colour.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/GBC-colour.png"
+                            alt="Good Business Charter" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/norfolk_prohelp.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/accreditations/norfolk_prohelp.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/norfolk_prohelp.png"
+                            alt="Norfolk Prohelp logo" class="coloured">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/investing-in-future-growth.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/accreditations/investing-in-future-growth.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/accreditations/investing-in-future-growth.jpg"
+                            alt="Investing In Future Growth" class="coloured">
+                    </picture>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Welcome Section -->
+        <div class="brand-bg welcome">
+            <div class="container">
+                <div class="col">
+                    <h2 class="subheading">Welcome To Netmatters</h2>
+                    <p><strong>
+                            Netmatters is a leading Bespoke Software, IT Support, and Digital Marketing company based in
+                            the
+                            East
+                            of England with offices in Cambridge, Wymondham, and Great Yarmouth.
+                        </strong>
+                    </p>
+                    <p>
+                        <strong>
+                            We aren't tied into contracts with third-party providers, so you know that our
+                            recommendations
+                            for
+                            your business are based purely with one benefit in mind: to help improve your business with
+                            the
+                            most
+                            appropriate solutions.
+                        </strong>
+                    </p>
+                    <p>
+                        <strong>
+                            We pride ourselves on being an ethical business and have a unique business offering and cost
+                            model
+                            that ensures you get the most from our relationship in an upfront manner.
+                        </strong>
+                    </p>
+
+                    <div class="welcome-links">
+                        <a href="#" class="btn">Why choose us? <span class="icon-arrow-right2"></span></a>
+                        <a href="#" class="btn">Our culture <span class="icon-arrow-right2"></span></a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h2>What Our Clients Think</h2>
+                    <div class="client-rating">
+                        <span class="icon-star-full"></span>
+                        <span class="icon-star-full"></span>
+                        <span class="icon-star-full"></span>
+                        <span class="icon-star-full"></span>
+                        <span class="icon-star-full"></span>
+                    </div>
+                    <p class="client-quote"><strong>
+                            Netmatters stood out from the start. Great guys and very easy to work with. Both the build
+                            and digital marketing teams are clearly skilled -they know their stuff! They delivered a
+                            website to our (high!) expectations and went over and above to ensure we were satisfied
+                            clients - and we are!
+                        </strong></p>
+                    <p><span class="client-quote-author">Eleanor Bishop, Head of Marketing - <a
+                                href="https://www.netmatters.co.uk/case-studies/ashcroft-partnership">Ashcroft
+                                Partnership LLP</a></span></p>
+                    <div class="welcome-links">
+                        <a href="#" class="btn google">Google reviews <span class="icon-arrow-right2"></span></a>
+                        <a href="#" class="btn trustpilot">Trustpilot reviews <span
+                                class="icon-arrow-right2"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Latest Articles Section -->
+        <div id="latest-articles">
+            <div class="container">
+                <div class="row space-between">
+                    <h2 class="subheading">Latest News</h2>
+                    <div class="view-all-articles mobile-hidden">
+                        <a href="#">
+                            <h2 class="mobile-hidden link">View Our Work <span class="icon-arrow-right2"></span></h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="articles-list">
+                    <div class="article-container">
+                        <div class="article">
+                            <div class="article-img">
+                                <img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/case-study-website-gFeC.webp"
+                                    alt="">
+                            </div>
+                            <div class="tag">Case Studies</div>
+                            <div class="text-content">
+                                <h3>
+                                    Case Study: Website Development for Streatham...
+                                </h3>
+                                <p>Client Overview Streatham & Clapham High School is a leading independent school in
+                                    South
+                                    London,...</p>
+                                <a class="btn" href="#">
+                                    Read More
+                                </a>
+                                <div class="user">
+                                    <span class="avatar">
+                                        <img src="https://www.netmatters.co.uk/assets/images/thumbnails/article_contact_thumb/netmatters-ltd-VXAv.png"
+                                            class="" alt="Netmatters ">
+                                    </span>
+                                    <span class="details">
+                                        <p><strong>Posted by Netmatters</strong> <br> 20th February 2025</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-container">
+                        <div class="article">
+                            <div class="article-img">
+                                <img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/case-study-langley-JW16.webp"
+                                    alt="">
+                            </div>
+                            <div class="tag">Case Studies</div>
+                            <div class="text-content">
+                                <h3>
+                                    Case Study: Langley School Website Rebuild
+                                </h3>
+                                <p>The Client Langley School is a leading independent school in Norfolk, UK, offering
+                                    exceptional
+                                    educa...</p>
+                                <a class="btn" href="#">
+                                    Read More
+                                </a>
+                                <div class="user">
+                                    <span class="avatar">
+                                        <img src="https://www.netmatters.co.uk/assets/images/thumbnails/article_contact_thumb/netmatters-ltd-VXAv.png"
+                                            class="" alt="Netmatters ">
+                                    </span>
+                                    <span class="details">
+                                        <p><strong>Posted by Netmatters</strong> <br> 10th February 2025</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-container">
+                        <div class="article">
+                            <div class="article-img">
+                                <img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/3rd-line-support-RUsc.webp"
+                                    alt="">
+                            </div>
+                            <div class="tag" style="background-color: #4183d7;">Careers</div>
+                            <div class="text-content">
+                                <h3 style="color: #4183d7;">3rd Line Support Technician</h3>
+                                <p>Salary Range £40,000 - £50,000 per annum Hours 40 hours per week, Monday - Friday
+                                    Location
+                                    Cambridge...</p>
+                                <a class="btn" style="background-color: #4183d7;" href="#">
+                                    Read More
+                                </a>
+                                <div class="user">
+                                    <span class="avatar">
+                                        <img src="https://www.netmatters.co.uk/assets/images/thumbnails/article_contact_thumb/bethany-shakespeare-F6Iu.jpg"
+                                            class="" alt="Bethany Shakespeare">
+                                    </span>
+                                    <span class="details">
+                                        <p><strong>Posted by Bethany Shakespeare</strong> <br> 6th February 2025</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-all-articles mobile-visible">
+                        <a href="#">
+                            <h3 class="link">View All <span class="icon-arrow-right2"></span></h3>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Clients Slideshow Section -->
+        <div class="slideshow__container">
+            <div class="clients slideshow">
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Ashcroft Partnership LLP</h3>
+                            <p>
+                                Originally founded in 2006 as Ashcroft Anthony, they became Ashcroft Partnership LLP
+                                in
+                                2020 and
+                                are one of the top chartered accountancy firms in Cambridge, advising entrepreneurs
+                                and
+                                families.
+                            </p>
+                            <a href="https://www.netmatters.co.uk/case-studies/ashcroft-partnership"
+                                class="btn btn-web">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/clients/ashcroftlogo_landscape_goldblack_DP60P-small.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/clients/ashcroftlogo_landscape_goldblack_DP60P-small.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/ashcroftlogo_landscape_goldblack_DP60P-small.png"
+                            alt="Ashcroft Logo">
+                    </picture>
+                </div>
+
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>One Traveller</h3>
+                            <p>
+                                <a href="https://www.onetraveller.co.uk/" target="_blank" rel="noopener noreferrer">One
+                                    Traveller</a>, founded in 2007, is a leading provider of solo holidays for over
+                                50s.
+                            </p>
+                            <a href="https://www.netmatters.co.uk/case-studies/one-traveller-web-case-study"
+                                class="btn btn-web">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/clients/onetravellerlogo_white_figuire.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/clients/onetravellerlogo_white_figuire.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/onetravellerlogo_white_figuire.png"
+                            alt="One Traveller Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Searles Leisure Resort</h3>
+                            <p>
+                                Searles Leisure Resort, on the beautiful North Norfolk coast, is an award-winning UK
+                                holiday
+                                resort for families.
+                            </p>
+                            <a href="https://www.netmatters.co.uk/case-studies/searles-leisure-resort"
+                                class="btn btn-digital">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/searles_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/searles_logo.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/searles_logo.jpg"
+                            alt="Searles Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Busseys</h3>
+                            <p>One of the UK's leading Ford dealerships.</p>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/busseys_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/busseys_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/busseys_logo.png"
+                            alt="Busseys Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Crane Garden Buildings</h3>
+                            <p>
+                                Leading manufacturer and supplier of high-end garden rooms, summerhouses, workshops
+                                and
+                                sheds in
+                                the UK.
+                            </p>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/crane_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/crane_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/crane_logo.png"
+                            alt="Crane Garden Buildings Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Black Swan Care Group</h3>
+                            <p>
+                                Black Swan Care Group own and manage 21 high-quality care and residential homes with
+                                a
+                                focus on
+                                putting the needs of their residents first.
+                            </p>
+                            <a href="https://www.netmatters.co.uk/case-studies/black-swan-care-group-home-management-software"
+                                class="btn btn-software">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/black_swan_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/black_swan_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/black_swan_logo.png"
+                            alt="Black Swan Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box box-no-description">
+                            <h3>Xupes</h3>
+                            <p>Xupes.</p>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/xupes_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/xupes_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/xupes_logo.png" alt="Xupes Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>BEAT</h3>
+                            <p>The UK's eating disorder charity founded in 1989.</p>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/beat_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/beat_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/beat_logo.png" alt="BEAT Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box box-no-description">
+                            <h3>Survey Solutions</h3>
+                            <p>Survey Solutions.</p>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/survey_solutions_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/survey_solutions_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/survey_solutions_logo.png"
+                            alt="Survey Solutions Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Girl Guiding Anglia</h3>
+                            <p>
+                                Girl Guiding Anglia is part of Girlguiding, the UK's leading charity for girls and
+                                young
+                                women in
+                                the UK.
+                            </p>
+                            <a href="https://www.netmatters.co.uk/girl-guides-case-study" class="btn btn-it">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/girl_guides_anglia.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/girl_guides_anglia.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/girl_guides_anglia.png"
+                            alt="Girl Guiding Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Sweetzy</h3>
+                            <p>Sweetzy are an online sweets retailer, based in Wymondham.</p>
+                            <a href="https://www.netmatters.co.uk/digital-marketing-case-study-sweetzy"
+                                class="btn btn-digital">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/sweetzy_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/sweetzy_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/sweetzy_logo.png"
+                            alt="Sweetzy Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box box-no-description">
+                            <h3>Howes Percival</h3>
+                            <p>Howes Percival.</p>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/howespercivallogo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/howespercivallogo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/howespercivallogo.png"
+                            alt="Howes Percival Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>GDST</h3>
+                            <p>
+                                The <a href="https://www.gdst.net/">Girls' Day School Trust (GDST)</a> is the UK's
+                                leading family
+                                of 25 independent girls' schools.
+                            </p>
+                            <a href="https://www.netmatters.co.uk/case-studies/gdst-case-study" class="btn btn-digital">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/clients/girls_day_school_trust_logob.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/clients/girls_day_school_trust_logob.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/girls_day_school_trust_logob.png"
+                            alt="GDST Logo">
+                    </picture>
+                </div>
+
+            </div>
+            <div class="clients slideshow">
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Ashcroft Partnership LLP</h3>
+                            <p>
+                                Originally founded in 2006 as Ashcroft Anthony, they became Ashcroft Partnership LLP
+                                in
+                                2020 and
+                                are one of the top chartered accountancy firms in Cambridge, advising entrepreneurs
+                                and
+                                families.
+                            </p>
+                            <a href="https://www.netmatters.co.uk/case-studies/ashcroft-partnership"
+                                class="btn btn-web">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/clients/ashcroftlogo_landscape_goldblack_DP60P-small.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/clients/ashcroftlogo_landscape_goldblack_DP60P-small.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/ashcroftlogo_landscape_goldblack_DP60P-small.png"
+                            alt="Ashcroft Logo">
+                    </picture>
+                </div>
+
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>One Traveller</h3>
+                            <p>
+                                <a href="https://www.onetraveller.co.uk/" target="_blank" rel="noopener noreferrer">One
+                                    Traveller</a>, founded in 2007, is a leading provider of solo holidays for over
+                                50s.
+                            </p>
+                            <a href="https://www.netmatters.co.uk/case-studies/one-traveller-web-case-study"
+                                class="btn btn-web">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/clients/onetravellerlogo_white_figuire.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/clients/onetravellerlogo_white_figuire.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/onetravellerlogo_white_figuire.png"
+                            alt="One Traveller Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Searles Leisure Resort</h3>
+                            <p>
+                                Searles Leisure Resort, on the beautiful North Norfolk coast, is an award-winning UK
+                                holiday
+                                resort for families.
+                            </p>
+                            <a href="https://www.netmatters.co.uk/case-studies/searles-leisure-resort"
+                                class="btn btn-digital">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/searles_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/searles_logo.jpg"
+                            type="image/jpg">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/searles_logo.jpg"
+                            alt="Searles Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Busseys</h3>
+                            <p>One of the UK's leading Ford dealerships.</p>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/busseys_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/busseys_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/busseys_logo.png"
+                            alt="Busseys Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Crane Garden Buildings</h3>
+                            <p>
+                                Leading manufacturer and supplier of high-end garden rooms, summerhouses, workshops
+                                and
+                                sheds in
+                                the UK.
+                            </p>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/crane_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/crane_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/crane_logo.png"
+                            alt="Crane Garden Buildings Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Black Swan Care Group</h3>
+                            <p>
+                                Black Swan Care Group own and manage 21 high-quality care and residential homes with
+                                a
+                                focus on
+                                putting the needs of their residents first.
+                            </p>
+                            <a href="https://www.netmatters.co.uk/case-studies/black-swan-care-group-home-management-software"
+                                class="btn btn-software">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/black_swan_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/black_swan_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/black_swan_logo.png"
+                            alt="Black Swan Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box box-no-description">
+                            <h3>Xupes</h3>
+                            <p>Xupes.</p>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/xupes_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/xupes_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/xupes_logo.png" alt="Xupes Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>BEAT</h3>
+                            <p>The UK's eating disorder charity founded in 1989.</p>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/beat_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/beat_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/beat_logo.png" alt="BEAT Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box box-no-description">
+                            <h3>Survey Solutions</h3>
+                            <p>Survey Solutions.</p>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/survey_solutions_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/survey_solutions_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/survey_solutions_logo.png"
+                            alt="Survey Solutions Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Girl Guiding Anglia</h3>
+                            <p>
+                                Girl Guiding Anglia is part of Girlguiding, the UK's leading charity for girls and
+                                young
+                                women in
+                                the UK.
+                            </p>
+                            <a href="https://www.netmatters.co.uk/girl-guides-case-study" class="btn btn-it">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/girl_guides_anglia.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/girl_guides_anglia.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/girl_guides_anglia.png"
+                            alt="Girl Guiding Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>Sweetzy</h3>
+                            <p>Sweetzy are an online sweets retailer, based in Wymondham.</p>
+                            <a href="https://www.netmatters.co.uk/digital-marketing-case-study-sweetzy"
+                                class="btn btn-digital">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/sweetzy_logo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/sweetzy_logo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/sweetzy_logo.png"
+                            alt="Sweetzy Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box box-no-description">
+                            <h3>Howes Percival</h3>
+                            <p>Howes Percival.</p>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/howespercivallogo.webp"
+                            type="image/webp">
+                        <source srcset="https://www.netmatters.co.uk/assets/images/clients/howespercivallogo.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/howespercivallogo.png"
+                            alt="Howes Percival Logo">
+                    </picture>
+                </div>
+
+                <div class="slideshow__item">
+                    <div class="description">
+                        <div class="box">
+                            <h3>GDST</h3>
+                            <p>
+                                The <a href="https://www.gdst.net/">Girls' Day School Trust (GDST)</a> is the UK's
+                                leading family
+                                of 25 independent girls' schools.
+                            </p>
+                            <a href="https://www.netmatters.co.uk/case-studies/gdst-case-study" class="btn btn-digital">
+                                View Our Case Study
+                                <em class="pull-right icon-arrow-right"></em>
+                            </a>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                    <picture>
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/clients/girls_day_school_trust_logob.webp"
+                            type="image/webp">
+                        <source
+                            srcset="https://www.netmatters.co.uk/assets/images/clients/girls_day_school_trust_logob.png"
+                            type="image/png">
+                        <img src="https://www.netmatters.co.uk/assets/images/clients/girls_day_school_trust_logob.png"
+                            alt="GDST Logo">
+                    </picture>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="">
+        <div class="footer__row container">
+            <div class="footer__company-info">
+                <div class="footer__info">
+                    <div class="footer__logo">
+                        <picture>
+                            <img src="img/nm-logo-white-med.webp" alt="Netmatters Logo">
+                        </picture>
+                    </div>
+                    <h4>FOLLOW US ON:</h4>
+                    <div class="footer-social-logos">
+                        <a class="fb" href="#">
+                            <span class="icon-facebook"></span>
+                        </a>
+                        <a class="li" href="">
+                            <span class="icon-linkedin2"></span>
+                        </a>
+                        <a class="twitter" href="">
+                            <span class="icon-twitter"></span>
+                        </a>
+                        <a class="insta" href="">
+                            <span class="icon-instagram"></span>
+                        </a>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer__menu">
+                <div class="col">
+                    <h4>About Netmatters</h4>
+                    <ul>
+                        <li>News</li>
+                        <li>Our Careers</li>
+                        <li>Our Team</li>
+                        <li>Contact Us</li>
+                        <li>Privacy Policy</li>
+                        <li>Cookie Policy</li>
+                        <li>Data Retention & Disposal Policy</li>
+                        <li>CCTV Policy</li>
+                        <li>Environmental Policy</li>
+                        <li>Terms & Conditions</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li>Bespoke Software</li>
+                        <li>IT Support</li>
+                        <li>Digital Marketing</li>
+                        <li>Telecoms Services</li>
+                        <li>Wed Design</li>
+                        <li>Cyber Security</li>
+                        <li>Developer Training</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Our Industries</h4>
+                    <ul>
+                        <li>Financial Services</li>
+                        <li>Construction</li>
+                        <li>Retail & E-Commerce</li>
+                        <li>Non-Profits</li>
+                        <li>SME's</li>
+                        <li>Healthcare</li>
+                        <li>Education & Training</li>
+                        <li>Travel and Leisure</li>
+                        <li>Manufacturing & Offshore</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li>Cambridge Office</li>
+                        <li>Wymondham Office</li>
+                        <li>Great Yarmouth Office</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__license--container container">
+                <div class="license">
+                    <p>&copy; Copyright Netmatters 2025. </p>
+                    <p> All rights reserved.</p>
+                    <p><span class="mobile-hidden">-</span> Sitemap</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Widgets -->
+    <div class="chat-widget">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.074 42.35" class="minimize-image_uj1BD">
+            <g data-name="Layer 2" transform="translate(-11.86 -14.678)">
+                <path
+                    d="M27.041 53.253c-1.064-1.771-2.107-3.505-3.087-5.276-.352-.636-.583-.81-1.592-.794-3.331.035-3.326.035-4.38.027l-.549-.008c-3.594-.003-5.572-1.992-5.572-5.602V20.27c0-3.607 1.983-5.591 5.588-5.591h31.993c3.523 0 5.462 1.947 5.462 5.48.005 9.007.005 12.633 0 21.64a4.892 4.892 0 01-5.399 5.401h-.008l-5.515-.005c-6.442-.008-4.361-.018-8.483.021a1.099 1.099 0 00-.505.352c-1.059 1.71-2.067 3.45-3.074 5.192l-1.169 2.007c-.084.147-.179.292-.297.473l-1.161 1.79z">
+                </path>
+                <rect rx=".812" height="3.043" width="32.605" y="21.789" x="17.045"></rect>
+                <rect rx=".812" height="3.043" width="32.605" y="29.228" x="17.045"></rect>
+                <rect rx=".812" height="3.043" width="19.008" y="36.668" x="17.045"></rect>
+            </g>
+        </svg>
+    </div>
+    <div class="consent-tag">
+        <strong>Manage Consent</strong>
+    </div>
+</body>
+
+</html>

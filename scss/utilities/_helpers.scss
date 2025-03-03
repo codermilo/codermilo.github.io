@@ -1,0 +1,89 @@
+// ==========================================================================
+// Helpers
+// ==========================================================================
+
+// Clearfix
+
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// Screen reader text
+
+.srt {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// Center alignment
+
+%center-align {
+    text-align: center;
+}
+
+// For pseudo-elements
+
+%pseudos {
+    display: block;
+    content: '';
+    position: absolute;
+}
+
+// Center elements
+
+.centered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Brand Background Color and Font Color 
+
+.brand-bg {
+    background-color: #323544;
+    color: #fff;
+}
+
+// Display Flex -- Row
+
+.row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+// Hide on Small Displays
+
+.mobile-hidden {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.mobile-visible {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.link {
+    &:hover {
+        text-decoration: underline;
+    }
+}
