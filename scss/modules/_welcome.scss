@@ -1,0 +1,87 @@
+.welcome {
+    padding-bottom: 2.5rem;
+
+    .container {
+        @media (min-width: 991px) {
+            display: flex;
+            // width: 100%;
+
+            .col {
+                flex: 1;
+                padding: 15px;
+            }
+
+            h2 {
+                padding: 0;
+            }
+        }
+    }
+
+    .subheading {
+        padding: 2rem 0 0 0;
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        padding: 2rem 0 0 0;
+    }
+
+    p {
+        line-height: 1.87rem;
+        margin-bottom: 2rem;
+    }
+
+    .client-rating {
+        span {
+            font-size: 3rem;
+            color: orange;
+        }
+    }
+
+    .client-quote {
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+
+    .client-quote-author {
+        color: #a3a8ac;
+        font-size: 1rem;
+        font-weight: 600;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    .welcome-links {
+        a {
+            background-color: #272936;
+            margin-bottom: 15px;
+            border-color: #272936;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-inline: 0;
+            border-radius: 6px;
+
+            &:hover {
+                background-color: #121318;
+            }
+
+
+            span {
+                margin-left: 15px;
+            }
+        }
+
+        .google:hover {
+            background-color: #166af4 !important;
+            border-color: #166af4 !important;
+        }
+        .trustpilot:hover {
+            background-color: #009b69 !important;
+            border-color: #009b69 !important;
+        }
+    }
+}
