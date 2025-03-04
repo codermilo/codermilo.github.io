@@ -85,9 +85,19 @@
             }
         }
 
+        @media (min-width: 992px) {
+            .banner-item__img::before {
+                background: linear-gradient(270deg, transparent 25%, #000);
+            }
+        }
+
         @media (max-width: 991px) {
 
             padding: 5rem 0 5rem 0;
+
+            .banner-item__img::before {
+                background: linear-gradient(270deg, transparent 1%, #000) !important;
+            }
 
         }
 
@@ -99,7 +109,18 @@
             left: 0;
             // opacity: .5;
             z-index: -1;
-            filter: brightness(.55);
+            // filter: brightness(.55);
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background: linear-gradient(270deg, transparent 25%, #000);
+                z-index: 3;
+            }
         }
 
         h1 {

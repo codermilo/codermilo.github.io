@@ -3,8 +3,9 @@
     padding-bottom: 2rem;
 
     .subheading {
-        padding: 1rem 0 0 0;
+        // padding: 1rem 0 0 0;
         font-size: 2.5rem;
+        font-weight: 500;
     }
 
     a {
@@ -75,23 +76,29 @@
 
             .text-content {
                 padding: 30px;
+                display: flex;
+                flex-direction: column;
+                min-height: 370px;
 
                 h3 {
                     font-size: large;
                     color: #926fb1;
+                    min-height: 54px;
+                    margin: 0;
                 }
 
                 p {
                     line-height: 1.375rem;
                     font-size: .8125rem;
+                    flex-grow: 1;
                 }
             }
 
             .btn {
                 font-size: medium;
-                padding: 15px 20px;
+                padding: 10px 20px;
                 height: auto;
-                margin: 1rem 0 2rem 0;
+                margin: auto 0 2rem 0;
                 letter-spacing: normal;
                 color: white;
             }
@@ -105,7 +112,7 @@
 
                 p {
                     margin: 0;
-                    font-size: .9rem;
+                    font-size: .85rem;
                 }
 
                 strong {
