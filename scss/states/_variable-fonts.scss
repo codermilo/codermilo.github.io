@@ -1,0 +1,16 @@
+// Function to animate elements with variable fonts
+
+.wide-el {
+    font-variation-settings: "wght" 800, "wdth" 125;
+    letter-spacing: 0;
+    display: inline-block;
+    transition: font-variation-settings 0.4s;
+}
+
+.wide-p:hover {
+    cursor: pointer;
+
+    .wide-el {
+        font-variation-settings: "wght" 800, "wdth" 100;
+    }
+}
