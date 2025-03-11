@@ -4,15 +4,15 @@
     padding-left: 15px;
     padding-right: 15px;
 
-    @media (min-width: 768px) {
+    @include mq(small) {
         width: 750px;
     }
 
-    @media (min-width: 992px) {
+    @include mq(medium) {
         width: 970px;
     }
 
-    @media (min-width: 1260px) {
+    @include mq(large) {
         width: 1200px;
     }
 

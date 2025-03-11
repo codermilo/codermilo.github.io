@@ -18,13 +18,14 @@
 
 // Generate modifier color classes
 
-@mixin bg-colors($map) {
-    @each $theme, $color in $map {
-        &--#{$theme} {
-            background-color: $color;
-        }
-    }
-}
+// @mixin bg-colors($map) {
+//     @each $theme, $color in $map {
+//         &--#{$theme} {
+//             background-color: $color;
+//             border-color: $color;
+//         }
+//     }
+// }
 
 // Generating :before or :after pseudo-element shapes
 
@@ -53,4 +54,42 @@
     width: $w;
     height: $h;
     display: $disp;
+}
+
+// Media queries
+
+@mixin mq($break) {
+    @if $break =="mini" {
+        @media (max-width: $brkpoint-sm) {
+            @content;
+        }
+    }
+
+    @else if $break =="small" {
+        @media (min-width: $brkpoint-sm) {
+            @content;
+        }
+    }
+
+    @else if $break =="max-medium" {
+        @media (min-width: $brkpoint-sm) {
+            @content;
+        }
+    }
+
+    @else if $break =="medium" {
+        @media (min-width: ($brkpoint-md + 1)) {
+            @content;
+        }
+    }
+
+    @else if $break =="large" {
+        @media (min-width: $brkpoint-lg) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "Whoops! No value can be retrieved for `#{$break}`!"
+    }
 }
