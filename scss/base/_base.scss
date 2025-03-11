@@ -10,18 +10,24 @@
         --background-color: #2b2b33;
         --color: #f3f2f9
     }
+
+    .stroke {
+        -webkit-text-stroke: 1.25px #aab2d1 !important;
+    }
+
     .noise {
         opacity: .2 !important;
     }
 }
 
 html {
-    color-scheme: dark light;
+    // color-scheme: dark light;
 }
 
 body {
     background-color: var(--background-color);
     color: var(--color);
+    padding: 0 1rem;
 }
 
 :root:has(#theme [value="☀️"]:checked) {
@@ -34,12 +40,29 @@ body {
     color-scheme: dark;
     --background-color: #2b2b33;
     --color: #f3f2f9;
+
+    .stroke {
+        -webkit-text-stroke: 1.25px #aab2d1 !important;
+    }
+
     .noise {
         opacity: .2 !important;
     }
 }
 
+p {
+    font-weight: $font-weight--semi-bold;
+    font-family: 'studiofeixen-variable';
+}
 
+section {
+    // padding: 0 2rem;
+    border-bottom: 1px solid var(--color);
+
+    &:last-of-type {
+        border: none;
+    }
+}
 
 // Noise page overlay
 
@@ -146,4 +169,3 @@ body {
         transform: translate(-10%, 10%)
     }
 }
-

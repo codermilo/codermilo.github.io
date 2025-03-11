@@ -71,17 +71,17 @@
     --background-color: #2b2b33;
     --color: #f3f2f9 ;
   }
+  .stroke {
+    -webkit-text-stroke: 1.25px #aab2d1 !important;
+  }
   .noise {
     opacity: 0.2 !important;
   }
 }
-html {
-  color-scheme: dark light;
-}
-
 body {
   background-color: var(--background-color);
   color: var(--color);
+  padding: 0 1rem;
 }
 
 :root:has(#theme [value=☀️]:checked) {
@@ -95,8 +95,23 @@ body {
   --background-color: #2b2b33;
   --color: #f3f2f9;
 }
+:root:has(#theme [value=🌑]:checked) .stroke {
+  -webkit-text-stroke: 1.25px #aab2d1 !important;
+}
 :root:has(#theme [value=🌑]:checked) .noise {
   opacity: 0.2 !important;
+}
+
+p {
+  font-weight: 500;
+  font-family: "studiofeixen-variable";
+}
+
+section {
+  border-bottom: 1px solid var(--color);
+}
+section:last-of-type {
+  border: none;
 }
 
 .noise {
@@ -400,32 +415,167 @@ input[type=checkbox], input[type=radio] {
   }
 }
 
-.btn, [class^=btn--] {
-  padding: 5px 15px;
+.btn,
+button, [class^=btn--] {
+  width: 3rem;
+  height: 3rem;
   border: 0;
-  border-radius: 3px;
+  border-radius: 50%;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 400;
   display: flex;
-  width: -moz-fit-content;
-  width: fit-content;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
-  margin-inline: auto;
+  background-color: var(--color);
+  color: var(--background-color);
+  font-weight: 900;
+}
+
+.logo__container {
+  position: fixed;
+  top: 0;
+  left: 1rem;
+  font-size: small;
+  z-index: 2;
+}
+
+.theme-toggle__container {
+  position: fixed;
+  top: 1.5rem;
+  right: 80px;
+  z-index: 2;
+}
+
+.hamburger__container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: var(--color);
+  stroke-width: 4.5;
+  stroke-linecap: round;
+}
+
+.ham8 .top {
+  stroke-dasharray: 40 160;
+}
+
+.ham8 .middle {
+  stroke-dasharray: 40 142;
+  transform-origin: 50%;
+  transition: transform 400ms;
+}
+
+.ham8 .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+}
+
+.ham8.active .top {
+  stroke-dashoffset: -64px;
+}
+
+.ham8.active .middle {
+  transform: rotate(90deg);
+}
+
+.ham8.active .bottom {
+  stroke-dashoffset: -64px;
+}
+
+#hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.project-container {
+  margin-bottom: 3.5rem;
+}
+.project-container .project {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.project-container .project .pr-img {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+}
+.project-container .project .pr-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6156862745));
+  z-index: 0;
+}
+.project-container .project h1,
+.project-container .project h4 {
+  margin: 0;
+}
+.project-container .project .pr-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.project-container .project .pr-details img {
+  width: 1rem;
 }
 
 .wide-el {
-  font-variation-settings: "wght" 800, "wdth" 125;
+  font-variation-settings: "wght" 400, "wdth" 125;
   letter-spacing: 0;
   display: inline-block;
   transition: font-variation-settings 0.4s;
 }
 
-.wide-p:hover {
+.wide-el:hover {
+  font-variation-settings: "wght" 400, "wdth" 100;
   cursor: pointer;
 }
-.wide-p:hover .wide-el {
-  font-variation-settings: "wght" 800, "wdth" 100;
+
+.stroke {
+  color: transparent;
+  -webkit-text-stroke: 1.25px #606887;
+  font-family: "studiofeixen";
+}
+.stroke .wide-el {
+  color: var(--color);
+  font-family: "studiofeixen-variable";
+  letter-spacing: 0.4px;
+  transition: all 0.4s;
+}
+.stroke .wide-el:hover {
+  font-variation-settings: "wght" 400, "wdth" 125;
+  opacity: 0.8;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
