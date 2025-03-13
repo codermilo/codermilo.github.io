@@ -11,7 +11,7 @@ p {
             width: fit-content;
 
             .large-font {
-                font-size: 5vw;
+                font-size: 4vw;
             }
         }
 
@@ -22,6 +22,17 @@ p {
         form {
             width: 100%;
             margin-top: 0;
+
+            button {
+                width: fit-content;
+                padding: 0.25rem 2.75rem;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .large-font {
+            font-size: 2vw !important;
         }
     }
 }
