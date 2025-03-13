@@ -87,6 +87,10 @@
   .noise {
     opacity: 0.2 !important;
   }
+  button {
+    background-color: #aab2d1 !important;
+    border-color: #aab2d1 !important;
+  }
 }
 html {
   color-scheme: dark light;
@@ -474,6 +478,7 @@ form textarea {
   background-color: var(--color);
   color: var(--background-color);
   padding: 0.5rem 0.25rem;
+  outline: 2px solid transparent;
 }
 form input::-moz-placeholder, form textarea::-moz-placeholder {
   color: var(--background-color);
