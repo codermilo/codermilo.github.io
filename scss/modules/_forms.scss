@@ -1,6 +1,14 @@
 form {
     margin: 1rem 0 1.5rem 0;
 
+    @media (min-width: 768px) {
+        margin-top: 2rem;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
     input,
     textarea {
         width: 100%;

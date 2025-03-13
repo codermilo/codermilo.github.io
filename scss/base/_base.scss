@@ -21,7 +21,7 @@
 
     button {
         background-color: #aab2d1 !important;
-        border-color: #aab2d1  !important;
+        border-color: #aab2d1 !important;
     }
 }
 
@@ -55,13 +55,41 @@ body {
     }
 }
 
+.page-wrapper {
+    display: flex;
+}
+
+.sidebar {
+    width: 10rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    display: none;
+}
+
+.page-wrapper {
+    @media (min-width: 768px) {
+        main {
+            width: 100%;
+            padding-left: 10rem;
+        }
+        .sidebar {
+            display: block;
+        }
+    }
+}
+
 p {
     font-weight: $font-weight--semi-bold;
     font-family: 'studiofeixen-variable';
 }
 
 section {
-    // padding: 0 2rem;
     border-bottom: 1px solid var(--color);
 
     &:last-of-type {
@@ -79,10 +107,14 @@ a {
 }
 
 .large-font {
-    font-size: 16vw;
+    font-size: 16.25vw;
     text-wrap: nowrap;
     letter-spacing: -2px;
     margin: 0;
+
+    @media (min-width: 768px) {
+        font-size: 13vw;
+    }
 }
 
 // Noise page overlay
