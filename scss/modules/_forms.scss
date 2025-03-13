@@ -14,13 +14,17 @@ form {
             color: var(--background-color);
         }
 
-        &:user-valid {
-            border-color: $spring-green;
+        &:not(:placeholder-shown):valid {
+            outline-color: $spring-green;
         }
 
-        &:user-invalid {
-            border-color: $flamingo;
+        &:not(:placeholder-shown):invalid {
+            outline-color: $flamingo;
         }
+
+        // &:focus:invalid {
+        //     outline-color: $lime;
+        // }
     }
 
     button {

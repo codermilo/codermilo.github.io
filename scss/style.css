@@ -48,6 +48,11 @@
   gap: 0.5rem;
 }
 
+.showy-container {
+  width: 100%;
+  text-align: center;
+}
+
 .mobile-hidden {
   display: none;
 }
@@ -475,11 +480,17 @@ form input::-moz-placeholder {
 form input::placeholder {
   color: var(--background-color);
 }
-form input:user-valid {
-  border-color: #78ffd1;
+form input:not(:-moz-placeholder-shown):valid {
+  outline-color: #78ffd1;
 }
-form input:user-invalid {
-  border-color: #ffb3c2;
+form input:not(:placeholder-shown):valid {
+  outline-color: #78ffd1;
+}
+form input:not(:-moz-placeholder-shown):invalid {
+  outline-color: #ffb3c2;
+}
+form input:not(:placeholder-shown):invalid {
+  outline-color: #ffb3c2;
 }
 form button {
   background-color: var(--color);

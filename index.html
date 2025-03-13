@@ -15,14 +15,13 @@
             <h1>MILO</h1>
         </div>
         <div class="theme-toggle__container">
-            <label>Theme:
-                <select data-theme-picker name="themepicker" id="theme">
-                    <option value="💻">System</option>
-                    <option value="☀️">Light</option>
-                    <option value="🌑">Dark</option>
-                    <option value="🙃">Don't pick</option>
-                </select>
-            </label>
+            <label class="srt">Theme: </label>
+            <select data-theme-picker name="themepicker" id="theme">
+                <!-- <option value="💻">System</option> -->
+                <option value="☀️"><i class="fa-solid fa-sun"></i></option>
+                <option value="🌑"><i class="fa-solid fa-moon"></i></option>
+                <!-- <option value="🙃">Don't pick</option> -->
+            </select>
         </div>
         <div class="hamburger__container">
             <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="64" onclick="this.classList.toggle('active')">
@@ -172,7 +171,9 @@
         </div>
     </section>
     <section id="contact">
-        <h1 class="wide-el">Contact</h1>
+        <div class="showy__container">
+            <h1 class="wide-el">Contact</h1>
+        </div>
         <div class="contact-info">
             <h1 class="stroke large-font">Get In Touch</h1>
             <p>Say hello! Whether it's a chat about anything design related or a potential project or opportunity you
