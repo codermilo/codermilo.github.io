@@ -1,0 +1,35 @@
+form {
+    margin: 1rem 0 1.5rem 0;
+
+    input {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        border-radius: $br--default;
+        border: 1px solid var(--color);
+        background-color: var(--color);
+        color: var(--background-color);
+        padding: 0.5rem 0.25rem;
+
+        &::placeholder {
+            color: var(--background-color);
+        }
+
+        &:user-valid {
+            border-color: $spring-green;
+        }
+
+        &:user-invalid {
+            border-color: $flamingo;
+        }
+    }
+
+    button {
+        background-color: var(--color);
+        border: 1px solid var(--color);
+        color: var(--background-color);
+        width: 100%;
+        border-radius: $br--default;
+        border: 1px solid var(--color);
+        padding: 0.5rem 0.25rem;
+    }
+}

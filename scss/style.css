@@ -43,6 +43,11 @@
   justify-content: space-between;
 }
 
+.row {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .mobile-hidden {
   display: none;
 }
@@ -78,6 +83,10 @@
     opacity: 0.2 !important;
   }
 }
+html {
+  color-scheme: dark light;
+}
+
 body {
   background-color: var(--background-color);
   color: var(--color);
@@ -112,6 +121,22 @@ section {
 }
 section:last-of-type {
   border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+.large-font {
+  font-size: 16vw;
+  text-wrap: nowrap;
+  letter-spacing: -2px;
+  margin: 0;
 }
 
 .noise {
@@ -212,7 +237,6 @@ textarea {
 body,
 html {
   margin: 0;
-  height: 100%;
   overflow-x: hidden;
 }
 
@@ -421,7 +445,7 @@ button, [class^=btn--] {
   height: 3rem;
   border: 0;
   border-radius: 50%;
-  color: #fff;
+  color: var(--background-color);
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 400;
@@ -430,8 +454,41 @@ button, [class^=btn--] {
   justify-content: center;
   gap: 0.4rem;
   background-color: var(--color);
-  color: var(--background-color);
   font-weight: 900;
+}
+
+form {
+  margin: 1rem 0 1.5rem 0;
+}
+form input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-radius: 3px;
+  border: 1px solid var(--color);
+  background-color: var(--color);
+  color: var(--background-color);
+  padding: 0.5rem 0.25rem;
+}
+form input::-moz-placeholder {
+  color: var(--background-color);
+}
+form input::placeholder {
+  color: var(--background-color);
+}
+form input:user-valid {
+  border-color: #78ffd1;
+}
+form input:user-invalid {
+  border-color: #ffb3c2;
+}
+form button {
+  background-color: var(--color);
+  border: 1px solid var(--color);
+  color: var(--background-color);
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid var(--color);
+  padding: 0.5rem 0.25rem;
 }
 
 .logo__container {
@@ -538,7 +595,7 @@ button, [class^=btn--] {
   background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6156862745));
   z-index: 0;
 }
-.project-container .project h1,
+.project-container .project h2,
 .project-container .project h4 {
   margin: 0;
 }
@@ -546,9 +603,12 @@ button, [class^=btn--] {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  font-size: 1.125rem;
 }
-.project-container .project .pr-details img {
-  width: 1rem;
+.project-container .project .pr-details .pr-link a {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .wide-el {

@@ -15,14 +15,14 @@ $font-url--google : 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@
 
 @font-face {
     font-family: studiofeixen;
-    src:  url(/assets/fonts/StudioFeixenSans-Bold.woff2) format("woff2");
+    src: url(/assets/fonts/StudioFeixenSans-Bold.woff2) format("woff2");
     font-weight: 700;
     font-style: normal
 }
 
 @font-face {
     font-family: studiofeixen-writer;
-    src:  url(/assets/fonts/StudioFeixenSansWriter-Regular.woff2) format("woff2");
+    src: url(/assets/fonts/StudioFeixenSansWriter-Regular.woff2) format("woff2");
     font-weight: 400;
     font-style: normal
 }
@@ -68,3 +68,16 @@ $path--rel : "../img";
 $brkpoint-sm: 768px;
 $brkpoint-md: 991px;
 $brkpoint-lg: 1261px;
+
+// Colors
+
+$spring-green : #78ffd1;
+$lime : #f0ffa6;
+$azure : #99b9ff;
+$flamingo : #ffb3c2;
+
+$palette: (
+    green: $spring-green,
+    lime: $lime,
+    blue: $azure,
+    red: $flamingo )
