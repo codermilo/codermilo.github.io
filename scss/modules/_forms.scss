@@ -1,7 +1,8 @@
 form {
     margin: 1rem 0 1.5rem 0;
 
-    input {
+    input,
+    textarea {
         width: 100%;
         margin-bottom: 0.5rem;
         border-radius: $br--default;
@@ -25,6 +26,10 @@ form {
         // &:focus:invalid {
         //     outline-color: $lime;
         // }
+    }
+
+    textarea {
+        resize: vertical;
     }
 
     button {
