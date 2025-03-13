@@ -1,301 +1,98 @@
-.main-navigation {
-    position: relative;
+//Logo - remains fixed in top left
+.logo__container {
+    position: fixed;
+    top: 0;
+    left: 1rem;
+    font-size: small;
+    z-index: 2;
+}
 
-    h4 {
-        margin: 0;
-        font-size: 1.125rem;
-        font-weight: 300;
-        line-height: 1.125rem;
-        text-transform: uppercase;
+// Theme toggle
+.theme-toggle__container {
+    position: fixed;
+    top: 1.5rem;
+    right: 80px;
+    z-index: 2;
+}
 
-        small {
-            font-size: .65rem;
-        }
-    }
+// Hamburger menu
+.hamburger__container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
 
-    span {
-        font-size: 1.5rem;
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-        margin-inline: auto;
-
-        li {
-            text-align: center;
-            flex: 1;
-
-            a {
-                text-decoration: none;
-                color: #fff;
-            }
-
-            &:hover {
-                span {
-                    color: #fff !important;
-                }
-
-                .main-nav__sub-menu__container {
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-        }
-
-    }
-
-    @media (max-width: 990px) {
+    @media (min-width: 768px) {
         display: none;
-    }
-
-    .main-nav__item {
-        background-color: transparent;
-        padding: 20px;
-        flex: 1;
-        position: relative;
-
-        &:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -35px;
-            width: 100%;
-            /* Match parent's width */
-            height: 35px;
-            /* Height of the triangle */
-            // background: #007bff;
-            /* Create a downward pointing triangle using clip-path */
-            clip-path: polygon(50% 100%, 0 0, 100% 0);
-            z-index: 4;
-        }
-    }
-
-    .software {
-        background-color: transparent;
-
-        span {
-            color: #67809f;
-        }
-
-        &:hover .main-nav__item {
-            background-color: #67809f;
-
-            &:before {
-                background-color: #67809f;
-            }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #526781;
-        }
-    }
-
-    .it {
-        background-color: transparent;
-
-        span {
-            color: #4183d7;
-        }
-
-        &:hover .main-nav__item {
-            background-color: #4183d7;
-
-            &:before {
-                background-color: #4183d7;
-            }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #286abd;
-        }
-    }
-
-    .digital {
-        background-color: transparent;
-
-        span {
-            color: #2ecc71;
-        }
-
-        &:hover .main-nav__item {
-            background-color: #2ecc71;
-
-            &:before {
-                background-color: #2ecc71;
-            }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #25a25a;
-
-        }
-    }
-
-    .telecoms {
-        background-color: transparent;
-
-        span {
-            color: #d64541;
-        }
-
-        &:hover .main-nav__item {
-            background-color: #d64541;
-
-            &:before {
-                background-color: #d64541;
-            }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #bc2c28;
-
-        }
-    }
-
-    .web {
-        background-color: transparent;
-
-        span {
-            color: #926fb1;
-        }
-
-        &:hover .main-nav__item {
-            background-color: #926fb1;
-
-            &:before {
-                background-color: #926fb1;
-            }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #79539a;
-
-        }
-    }
-
-    .cyber {
-        background-color: transparent;
-
-        span {
-            color: #f62459;
-        }
-
-        &:hover .main-nav__item {
-            background-color: #f62459;
-
-            &:before {
-                background-color: #f62459;
-            }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #de093f;
-        }
-    }
-
-    .developer {
-        background-color: transparent;
-
-        span {
-            color: #ce4125;
-        }
-
-        &:hover .main-nav__item {
-            background-color: #ce4125;
-
-            &:before {
-                background-color: #ce4125;
-            }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #a3331d;
-        }
     }
 }
 
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
+.hamRotate.active {
+    transform: rotate(45deg);
+}
 
-.main-nav__sub-menu__container {
-    display: none;
-    position: absolute;
-    // height: 200px;
-    width: 100%;
-    left: 0;
+.line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: var(--color);
+    stroke-width: 4.5;
+    stroke-linecap: round;
+}
+
+.ham8 .top {
+    stroke-dasharray: 40 160;
+}
+
+.ham8 .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+}
+
+.ham8 .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+}
+
+.ham8.active .top {
+    stroke-dashoffset: -64px;
+}
+
+.ham8.active .middle {
+    transform: rotate(90deg);
+}
+
+.ham8.active .bottom {
+    stroke-dashoffset: -64px;
+}
+
+// Sidebar CSS
+
+.nav-menu__container {
     padding: 1rem;
-    text-align: start;
-    box-sizing: border-box;
-    z-index: 3;
+    height: 100%;
+    display: flex;
+    align-items: center;
 
-    h3 {
-        font-size: 2rem;
+    ul {
+        padding: 0;
     }
 
-    .main-nav__sub-menu {
-        position: relative;
-        margin-inline: auto;
-    }
-
-    .sub-menu__inner {
-        display: flex;
-        width: 100%;
-        // position: relative;
-        box-sizing: border-box;
-        gap: 1rem;
-
-        .column {
-            flex: 1 1 0;
-            min-width: 0;
-            padding: 10px;
-
-            ul {
-                display: flex;
-                flex-direction: column;
-                text-transform: uppercase;
-                // width: 350px;
-                width: 100%;
-
-                li {
-                    text-align: left !important;
-                    position: relative;
-                    margin-bottom: 1.75rem;
-                    font-weight: 500;
-                    letter-spacing: .4px;
-                    padding-left: 20px;
-                    text-wrap: wrap;
-                    padding: 0 15px;
-                    // width: 300px;
-                    text-transform: capitalize;
-                    font-size: 1.25rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 0.75rem;
-
-                    // &:before {
-                    //     content: "";
-                    //     position: absolute;
-                    //     top: 50%;
-                    //     left: 5px;
-                    //     height: 10px;
-                    //     width: 10px;
-                    //     transform: translate(-50%, -50%);
-                    //     background-color: #fff;
-                    // }
-
-                    span {
-                        // position: absolute;
-                        // top: 40%;
-                        // left: -15px;
-                        // height: 10px;
-                        // width: 10px;
-                        // transform: translate(-50%, -50%);
-                        font-size: 1.25rem;
-                    }
-                }
-            }
-        }
+    li {
+        margin: 0 0 1.75rem 0;
+        list-style: none;
+        font-size: large;
+        font-weight: 600;
     }
 }

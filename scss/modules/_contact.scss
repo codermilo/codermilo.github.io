@@ -1,0 +1,27 @@
+p {
+    // margin: 0 0 1.5rem 0;
+}
+
+.contact-content__container {
+    @media (min-width: 991px) {
+        display: flex;
+        gap: 1rem;
+
+        .showy__container {
+            width: fit-content;
+
+            .large-font {
+                font-size: 5vw;
+            }
+        }
+
+        .contact-info {
+            max-width: 300px;
+        }
+
+        form {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+}

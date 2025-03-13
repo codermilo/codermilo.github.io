@@ -1,21 +1,22 @@
 // Buttons
 
 %btn {
-    padding: 15px 30px;
+    width: 3rem;
+    height: 3rem;
     border: 0;
-    border-radius: $br--default;
-    color: $white;
+    border-radius: $br--round;
+    color: var(--background-color);
     text-transform: uppercase;
-    font-size: em(14px);
+    text-decoration: none;
     font-weight: $font-weight--medium;
-    transition: opacity $trns-duration;
-    display: block;
-
-    &:hover {
-        opacity: .75;
-    }
-
-    &:active {
-        opacity: initial;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    background-color: var(--color);
+    //background-color: $lime;
+    //background-color: $spring-green;
+    //background-color: $azure;
+    // background-color: $flamingo;
+    font-weight: 900;
 }

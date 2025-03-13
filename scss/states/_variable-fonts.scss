@@ -1,0 +1,31 @@
+// Function to animate elements with variable fonts
+
+.wide-el {
+    font-variation-settings: "wght" 400, "wdth" 125;
+    letter-spacing: 0;
+    display: inline-block;
+    transition: font-variation-settings 0.4s;
+}
+
+.wide-el:hover {
+    font-variation-settings: "wght" 400, "wdth" 100;
+    cursor: pointer;
+}
+
+.stroke {
+    color: transparent;
+    -webkit-text-stroke: 1.25px #606887;
+    font-family: 'studiofeixen';
+
+    .wide-el {
+        color: var(--color);
+        font-family: 'studiofeixen-variable';
+        letter-spacing: .4px;
+        transition: all .4s;
+    }
+    .wide-el:hover {
+        font-variation-settings: "wght" 400, "wdth" 125;
+        opacity: .8;
+        cursor: pointer;
+    }
+}

@@ -2,16 +2,6 @@
 // Helpers
 // ==========================================================================
 
-// Clearfix
-
-%clearfix {
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
 // Screen reader text
 
 .srt {
@@ -47,43 +37,34 @@
     margin-right: auto;
 }
 
-// Brand Background Color and Font Color 
-
-.brand-bg {
-    background-color: #323544;
-    color: #fff;
+.space-between {
+    justify-content: space-between;
 }
-
-// Display Flex -- Row
 
 .row {
     display: flex;
-    width: 100%;
-    align-items: center;
-    padding-right: 15px;
-    padding-left: 15px;
+    gap: 0.5rem;
 }
 
-.space-between {
-    justify-content: space-between;
+.showy__container {
+    width: 100%;
+    text-align: center;
 }
 
 // Hide on Small Displays
 
 .mobile-hidden {
-    @media (max-width: 768px) {
-        display: none;
+    display: none;
+
+    @include mq(small) {
+        display: block;
     }
 }
 
 .mobile-visible {
-    @media (min-width: 768px) {
-        display: none;
-    }
-}
+    display: block;
 
-.link {
-    &:hover {
-        text-decoration: underline;
+    @include mq(small) {
+        display: none;
     }
 }
