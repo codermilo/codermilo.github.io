@@ -10,4 +10,14 @@
     @media (min-width: 768px) {
         padding: 0 7rem;
     }
+
+    @media (min-width: 1200px) {
+        h1 {
+            font-size: 5vw;
+        }
+
+        p {
+            font-size: 2vw;
+        }
+    }
 }
