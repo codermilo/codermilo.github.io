@@ -1,7 +1,18 @@
 .btn,
 button {
     @extend %btn;
+    transition: all .15s ease;
     // @include bg-colors($ui-colors);
+    &:hover {
+        background-color: $lime;
+        color: $black;
+        border-color: $lime;
+        scale: 1.05;
+    }
+
+    &:active {
+        scale: 0.95;
+    }
 }
 
 [class^="btn--"] {

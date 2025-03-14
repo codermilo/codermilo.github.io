@@ -8,7 +8,7 @@
 }
 
 .wide-el:hover {
-    font-variation-settings: "wght" 400, "wdth" 100;
+    // font-variation-settings: "wght" 400, "wdth" 100;
     cursor: pointer;
 }
 
@@ -18,13 +18,14 @@
     font-family: 'studiofeixen';
 
     .wide-el {
-        color: var(--color);
+        // color: var(--color);
+        -webkit-text-stroke: none !important;
         font-family: 'studiofeixen-variable';
         letter-spacing: .4px;
         transition: all .4s;
     }
     .wide-el:hover {
-        font-variation-settings: "wght" 400, "wdth" 125;
+        // font-variation-settings: "wght" 400, "wdth" 125;
         opacity: .8;
         cursor: pointer;
     }
