@@ -33,6 +33,14 @@ body {
     background-color: var(--background-color);
     color: var(--color);
     padding: 0 1rem;
+
+    @media (min-width: 768px) {
+        padding: 0 2rem;
+    }
+
+    @media (min-width: 1200px) {
+        padding: 0 3rem;
+    }
 }
 
 :root:has(#theme [value="☀️"]:checked) {
@@ -57,6 +65,22 @@ body {
 
 .page-wrapper {
     display: flex;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 80%;
+        transform: rotate(80deg) scale(15);
+        filter: blur(10px);
+    }
 }
 
 .sidebar {
