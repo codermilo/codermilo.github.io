@@ -7,21 +7,13 @@ p {
         display: flex;
         gap: 1rem;
 
-        .showy__container {
-            width: fit-content;
-
-            .large-font {
-                font-size: 4vw;
-            }
-        }
-
         .contact-info {
             max-width: 300px;
         }
 
         form {
             width: 100%;
-            margin-top: 0;
+            margin-top: 1.75rem;
 
             button {
                 width: fit-content;

@@ -29,7 +29,7 @@
   width: 1px;
 }
 
-[class^=btn--] {
+[class^=btn--], .text-centered {
   text-align: center;
 }
 
@@ -37,6 +37,18 @@
   float: none;
   margin-left: auto;
   margin-right: auto;
+}
+
+.text-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-vh {
+  min-height: 100vh;
+  padding: 2rem 0;
 }
 
 .space-between {
@@ -79,7 +91,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #2b2b33;
-    --color: #f3f2f9 ;
+    --color: #f3f2f9;
   }
   .stroke {
     -webkit-text-stroke: 1.25px #aab2d1 !important;
@@ -91,6 +103,10 @@
     background-color: #aab2d1 !important;
     border-color: #aab2d1 !important;
   }
+  .blob {
+    stroke: #aab2d1 !important;
+    fill: rgba(170, 178, 209, 0.2666666667) !important;
+  }
 }
 html {
   color-scheme: dark light;
@@ -99,23 +115,17 @@ html {
 body {
   background-color: var(--background-color);
   color: var(--color);
-  padding: 0 1rem;
-}
-@media (min-width: 768px) {
-  body {
-    padding: 0 2rem;
-  }
-}
-@media (min-width: 1200px) {
-  body {
-    padding: 0 3rem;
-  }
 }
 
 :root:has(#theme [value=☀️]:checked) {
   color-scheme: light;
   --background-color: #f3f2f9;
   --color: #606887;
+}
+:root:has(#theme [value=☀️]:checked) .blob {
+  stroke: #99b9ff !important;
+  fill: #78ffd1 !important;
+  opacity: 0.15 !important;
 }
 
 :root:has(#theme [value=🌑]:checked) {
@@ -126,29 +136,78 @@ body {
 :root:has(#theme [value=🌑]:checked) .stroke {
   -webkit-text-stroke: 1.25px #aab2d1 !important;
 }
+:root:has(#theme [value=🌑]:checked) .wide-el {
+  color: #aab2d1;
+}
 :root:has(#theme [value=🌑]:checked) .noise {
   opacity: 0.2 !important;
+}
+:root:has(#theme [value=🌑]:checked) .blob {
+  stroke: #aab2d1 !important;
+  fill: rgba(170, 178, 209, 0.2666666667) !important;
 }
 
 .page-wrapper {
   display: flex;
+  position: relative;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  main {
+    padding: 0 2rem;
+  }
+}
+
+/* Backdrop Blob Container */
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-.backdrop img {
-  position: absolute;
-  top: 0;
-  left: 80%;
-  transform: rotate(80deg) scale(15);
-  filter: blur(10px);
+.backdrop svg {
+  height: 100vh;
+  width: 100vw;
 }
 
+/* Blob Styling */
+.blob {
+  fill: #ffb3c2;
+  stroke: #78ffd1;
+  stroke-linecap: round;
+  stroke-width: 2;
+  will-change: transform;
+  animation: float 25s infinite alternate ease-in-out;
+  transform-origin: center;
+  filter: blur(5px);
+  opacity: 0.45;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: scale(1.5) translate(65%, 50%) rotate(0);
+  }
+  50% {
+    transform: scale(1.55) translate(calc(60% - 10px), 50%) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1.5) translate(65%, 50%) rotate(0);
+  }
+}
 .sidebar {
   width: 10rem;
   height: 100vh;
@@ -156,14 +215,18 @@ body {
   top: 0;
   left: 0;
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
-  z-index: 3;
+  z-index: 9999;
   display: none;
+  background-color: var(--background-color);
 }
 
+.page-wrapper {
+  width: 100%;
+}
 @media (min-width: 768px) {
   .page-wrapper main {
     width: 100%;
-    padding-left: 10rem;
+    margin-left: 10rem;
   }
   .page-wrapper .sidebar {
     display: block;
@@ -172,7 +235,7 @@ body {
 @media (min-width: 1200px) {
   .page-wrapper main {
     width: 100%;
-    padding-left: 15rem;
+    margin-left: 15rem;
   }
   .page-wrapper .sidebar {
     width: 15rem;
@@ -198,18 +261,6 @@ a {
 
 .hidden {
   display: none;
-}
-
-.large-font {
-  font-size: 16.25vw;
-  text-wrap: nowrap;
-  letter-spacing: -2px;
-  margin: 0;
-}
-@media (min-width: 768px) {
-  .large-font {
-    font-size: 13vw;
-  }
 }
 
 .noise {
@@ -513,6 +564,22 @@ input[type=checkbox], input[type=radio] {
 }
 
 .btn,
+button {
+  transition: all 0.15s ease;
+}
+.btn:hover,
+button:hover {
+  background-color: #f0ffa6;
+  color: #0b0b0b;
+  border-color: #f0ffa6;
+  scale: 1.05;
+}
+.btn:active,
+button:active {
+  scale: 0.95;
+}
+
+.btn,
 button, [class^=btn--] {
   width: 3rem;
   height: 3rem;
@@ -547,17 +614,17 @@ form textarea {
   margin-bottom: 0.5rem;
   border-radius: 3px;
   border: 1px solid var(--color);
-  background-color: var(--color);
-  color: var(--background-color);
+  background-color: var(--background-color);
+  color: var(--color) !important;
   padding: 0.5rem 0.25rem;
   outline: 2px solid transparent;
 }
 form input::-moz-placeholder, form textarea::-moz-placeholder {
-  color: var(--background-color);
+  color: var(--color);
 }
 form input::placeholder,
 form textarea::placeholder {
-  color: var(--background-color);
+  color: var(--color);
 }
 form input:not(:-moz-placeholder-shown):valid, form textarea:not(:-moz-placeholder-shown):valid {
   outline-color: #78ffd1;
@@ -797,19 +864,12 @@ form button {
     display: flex;
     gap: 1rem;
   }
-  .contact-content__container .showy__container {
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .contact-content__container .showy__container .large-font {
-    font-size: 4vw;
-  }
   .contact-content__container .contact-info {
     max-width: 300px;
   }
   .contact-content__container form {
     width: 100%;
-    margin-top: 0;
+    margin-top: 1.75rem;
   }
   .contact-content__container form button {
     width: -moz-fit-content;
@@ -831,7 +891,6 @@ form button {
 }
 
 .wide-el:hover {
-  font-variation-settings: "wght" 400, "wdth" 100;
   cursor: pointer;
 }
 
@@ -841,13 +900,12 @@ form button {
   font-family: "studiofeixen";
 }
 .stroke .wide-el {
-  color: var(--color);
+  -webkit-text-stroke: none !important;
   font-family: "studiofeixen-variable";
   letter-spacing: 0.4px;
   transition: all 0.4s;
 }
 .stroke .wide-el:hover {
-  font-variation-settings: "wght" 400, "wdth" 125;
   opacity: 0.8;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

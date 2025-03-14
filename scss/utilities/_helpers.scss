@@ -37,6 +37,19 @@
     margin-right: auto;
 }
 
+.text-centered {
+    @extend %center-align;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-vh {
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
 .space-between {
     justify-content: space-between;
 }
