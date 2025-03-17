@@ -109,6 +109,8 @@ main {
     svg {
         height: 100vh;
         width: 100vw;
+        filter: blur(30px);
+        -webkit-filter: blur(30px);
     }
 }
 
@@ -121,8 +123,6 @@ main {
     will-change: transform;
     animation: float 25s infinite alternate ease-in-out;
     transform-origin: center;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
     opacity: 0.45;
 }
 
@@ -159,6 +159,7 @@ main {
 
 .page-wrapper {
     width: 100%;
+
     @media (min-width: 768px) {
         main {
             width: 100%;
