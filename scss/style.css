@@ -193,6 +193,7 @@ main {
   animation: float 25s infinite alternate ease-in-out;
   transform-origin: center;
   filter: blur(5px);
+  -webkit-filter: blur(5px);
   opacity: 0.45;
 }
 
@@ -544,8 +545,6 @@ input[type=checkbox], input[type=radio] {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 @media (min-width: 768px) {
   .container {
