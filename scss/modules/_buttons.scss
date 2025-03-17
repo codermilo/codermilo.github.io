@@ -8,6 +8,7 @@ button {
         color: $black;
         border-color: $lime;
         scale: 1.05;
+        cursor: pointer;
     }
 
     &:active {
