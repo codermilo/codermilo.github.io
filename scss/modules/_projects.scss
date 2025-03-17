@@ -8,13 +8,13 @@
         }
     }
 
-    @media (min-width: 1200px) {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 2rem;
-        grid-row-gap: 0rem;
-    }
+    // @media (min-width: 1200px) {
+    //     display: grid;
+    //     grid-template-columns: repeat(3, 1fr);
+    //     grid-template-rows: repeat(2, 1fr);
+    //     grid-column-gap: 2rem;
+    //     grid-row-gap: 0rem;
+    // }
 
 }
 
@@ -36,16 +36,23 @@
         }
 
         @media (min-width: 1200px) {
-            flex-direction: column !important;
+            // flex-direction: column !important;
         }
 
         .pr-img {
             position: relative;
-            height: 70vh;
+            height: auto;
             width: 100%;
+            aspect-ratio: auto 1536 / 2560;
+            height: 55vh;
 
             @media (min-width: 576px) {
-                height: 30vh;
+                min-height: 500px;
+            }
+
+            @media (min-width: 1200px) {
+                width: 50%;
+                // height: 55vw;
             }
 
             &::after {
@@ -65,20 +72,43 @@
             margin: 0;
         }
 
+        h2 {
+            font-size: 3rem;
+            margin: 1rem 0;
+        }
+
         .pr-details {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
             font-size: 1.125rem;
+            max-width: 100%;
+            align-items: flex-start;
+            // border: 1px solid red;
+            width: 100%;
 
             @media (min-width: 991px) {
                 justify-content: center;
+                // max-width: 35vw;
+                width: 50%;
             }
 
             .pr-link a {
                 display: flex;
                 gap: 0.5rem;
                 align-items: center;
+            }
+
+            .pr-description {
+                // max-width: 25vw;
+
+                @media (min-width: 991px) {
+                    max-width: 35vw;
+                }
+
+                @media (min-width: 1200px) {
+                    max-width: 20vw;
+                }
             }
         }
     }

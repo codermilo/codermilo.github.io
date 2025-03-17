@@ -341,6 +341,7 @@ button:hover {
   color: #0b0b0b;
   border-color: #f0ffa6;
   scale: 1.05;
+  cursor: pointer;
 }
 .btn:active,
 button:active {
@@ -499,7 +500,7 @@ form button {
 
 .nav-menu__container {
   padding: 1rem;
-  height: 100%;
+  height: calc(100% - 3.5rem);
   display: flex;
   align-items: center;
 }
@@ -519,6 +520,33 @@ form button {
     font-size: 1.75rem;
   }
 }
+.nav-menu__container li a {
+  transition: all 250ms ease-out;
+  position: relative;
+}
+.nav-menu__container li:hover a {
+  color: #f0ffa6;
+  text-shadow: black 1px 0 10px;
+}
+.nav-menu__container li:hover a::before {
+  transform: translateY(-100%);
+}
+
+.social-links {
+  height: 3.5rem;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.social-links .fa-brands {
+  font-size: 2.5rem;
+  transition: all 0.15s ease;
+}
+.social-links .fa-brands:hover {
+  color: #f0ffa6;
+  text-shadow: black 1px 0 10px;
+}
 
 #hero {
   height: 100vh;
@@ -528,10 +556,29 @@ form button {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0 2rem;
+}
+#hero .wide-el {
+  transition: all 400ms ease;
+}
+#hero .wide-el:hover {
+  color: #f0ffa6 !important;
+  text-shadow: black 2px 0 16px;
+}
+@media (min-width: 458px) {
+  #hero {
+    padding: 0 5rem;
+  }
+  #hero h1 {
+    font-size: 7vw;
+  }
 }
 @media (min-width: 768px) {
   #hero {
     padding: 0 7rem;
+  }
+  #hero h1 {
+    font-size: 7vw;
   }
 }
 @media (min-width: 1200px) {
@@ -550,15 +597,6 @@ form button {
 @media (min-width: 991px) {
   .project__list .project__container:nth-child(even) .project {
     flex-direction: row-reverse;
-  }
-}
-@media (min-width: 1200px) {
-  .project__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 2rem;
-    grid-row-gap: 0rem;
   }
 }
 
@@ -581,19 +619,21 @@ form button {
     flex-direction: row;
   }
 }
-@media (min-width: 1200px) {
-  .project__container .project {
-    flex-direction: column !important;
-  }
-}
 .project__container .project .pr-img {
   position: relative;
-  height: 70vh;
+  height: auto;
   width: 100%;
+  aspect-ratio: auto 1536/2560;
+  height: 55vh;
 }
 @media (min-width: 576px) {
   .project__container .project .pr-img {
-    height: 30vh;
+    min-height: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .project__container .project .pr-img {
+    width: 50%;
   }
 }
 .project__container .project .pr-img::after {
@@ -610,21 +650,39 @@ form button {
 .project__container .project h4 {
   margin: 0;
 }
+.project__container .project h2 {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
 .project__container .project .pr-details {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   font-size: 1.125rem;
+  max-width: 100%;
+  align-items: flex-start;
+  width: 100%;
 }
 @media (min-width: 991px) {
   .project__container .project .pr-details {
     justify-content: center;
+    width: 50%;
   }
 }
 .project__container .project .pr-details .pr-link a {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+}
+@media (min-width: 991px) {
+  .project__container .project .pr-details .pr-description {
+    max-width: 35vw;
+  }
+}
+@media (min-width: 1200px) {
+  .project__container .project .pr-details .pr-description {
+    max-width: 20vw;
+  }
 }
 
 @media (min-width: 991px) {
@@ -648,6 +706,63 @@ form button {
 @media (min-width: 1200px) {
   .contact-content__container .large-font {
     font-size: 2vw !important;
+  }
+}
+
+.scs {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+.scs .wide-el {
+  transition: all 400ms ease;
+}
+.scs .wide-el:hover {
+  color: #f0ffa6 !important;
+  text-shadow: black 2px 0 16px;
+}
+.scs p {
+  line-height: 1.8;
+  font-weight: 600;
+}
+.scs .tr-score {
+  margin: 1rem 0;
+}
+.scs .tr-score p {
+  margin: 0;
+}
+.scs .tr-score p:last-of-type {
+  color: #f0ffa6;
+  text-shadow: black 2px 0 16px;
+}
+@media (min-width: 458px) {
+  .scs {
+    padding: 0 5rem;
+  }
+  .scs h1 {
+    font-size: 7vw;
+  }
+}
+@media (min-width: 768px) {
+  .scs {
+    padding: 0 7rem;
+  }
+  .scs h1 {
+    font-size: 7vw;
+  }
+}
+@media (min-width: 1200px) {
+  .scs h1 {
+    font-size: 5vw;
+  }
+  .scs p {
+    font-size: 1vw;
+    max-width: 75%;
   }
 }
 
