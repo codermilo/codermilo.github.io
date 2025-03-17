@@ -1,5 +1,4 @@
 .scs {
-    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -24,11 +23,15 @@
 
     .tr-score {
         margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         p {
             margin: 0;
             &:last-of-type {
                 color: $lime;
                 text-shadow: black 2px 0 16px;
+                max-width: none;
             }
         }
     }

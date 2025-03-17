@@ -241,7 +241,7 @@ main {
     margin-left: 10rem;
   }
   .page-wrapper .sidebar {
-    display: block;
+    display: flex;
   }
 }
 @media (min-width: 1200px) {
@@ -427,7 +427,14 @@ form button {
   top: 0;
   left: 1rem;
   font-size: small;
-  z-index: 2;
+  z-index: 99999;
+}
+.logo__container a {
+  transition: all 150ms ease;
+}
+.logo__container a:hover {
+  color: #f0ffa6;
+  text-shadow: black 1px 0 10px;
 }
 
 .theme-toggle__container {
@@ -498,16 +505,20 @@ form button {
   stroke-dashoffset: -64px;
 }
 
-.nav-menu__container {
+.sidebar {
+  height: 100%;
+  flex-direction: column;
   padding: 1rem;
-  height: calc(100% - 3.5rem);
+}
+
+.nav-menu__container {
+  flex: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .nav-menu__container ul {
   padding: 0;
-  display: flex;
-  flex-direction: column;
 }
 .nav-menu__container li {
   margin: 0 0 1.75rem 0;
@@ -533,11 +544,21 @@ form button {
 }
 
 .social-links {
-  height: 3.5rem;
-  width: 100%;
-  padding: 0 1rem;
-  display: flex;
-  gap: 0.5rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.25rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+.social-links a {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .social-links .fa-brands {
   font-size: 2.5rem;
@@ -546,6 +567,13 @@ form button {
 .social-links .fa-brands:hover {
   color: #f0ffa6;
   text-shadow: black 1px 0 10px;
+}
+@media (min-width: 1200px) {
+  .social-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+  }
 }
 
 #hero {
@@ -710,7 +738,6 @@ form button {
 }
 
 .scs {
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -732,6 +759,9 @@ form button {
 }
 .scs .tr-score {
   margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .scs .tr-score p {
   margin: 0;
@@ -739,6 +769,7 @@ form button {
 .scs .tr-score p:last-of-type {
   color: #f0ffa6;
   text-shadow: black 2px 0 16px;
+  max-width: none;
 }
 @media (min-width: 458px) {
   .scs {
