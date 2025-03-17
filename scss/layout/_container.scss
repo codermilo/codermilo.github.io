@@ -3,17 +3,22 @@
     margin-left: auto;
     // padding-left: 15px;
     // padding-right: 15px;
+    padding: 0 1rem;
 
     @include mq(small) {
-        width: 750px;
+        //width: calc(750px - 10rem);
+        padding: 0 2rem;
+        width: 100%;
     }
 
     @include mq(medium) {
-        width: 970px;
+        //width: calc(970px - 7rem);
     }
 
     @include mq(large) {
-        width: 1200px;
+        // width: calc(1200px - 15rem);
+        width: 100%;
+        max-width: 1624px;
     }
 
 }
