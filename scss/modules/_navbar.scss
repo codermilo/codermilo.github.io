@@ -1,10 +1,29 @@
-//Logo - remains fixed in top left
-.logo__container {
+header {
     position: fixed;
-    top: 0;
-    left: 1rem;
-    font-size: small;
+    width: 100vw;
     z-index: 99999;
+
+    .header__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+
+        h1 {
+            margin: 0;
+        }
+
+        .right-align {
+            display: flex;
+            gap: 0rem;
+            align-items: center;
+        }
+    }
+}
+
+// Logo
+.logo__container {
+    font-size: small;
 
     a {
         transition: all 150ms ease;
@@ -18,18 +37,58 @@
 
 // Theme toggle
 .theme-toggle__container {
-    position: fixed;
-    top: 1.5rem;
-    right: 80px;
-    z-index: 2;
+    display: inline-block;
+    font-size: x-large;
+    margin-right: 2rem;
+    padding-top: 1rem;
+
+    @media (max-width: 768px) {
+        padding-top: 0 !important;
+    }
+
+    input {
+        display: none;
+    }
+
+    .sun {
+        display: none;
+    }
+
+    input:checked~.moon {
+        display: none;
+    }
+
+    input:checked~.sun {
+        display: inline-block;
+    }
+
+    .sun,
+    .moon {
+        transition: all 150ms ease-out;
+        transform-origin: center;
+    }
+
+    .sun:hover,
+    .moon:hover {
+        cursor: pointer;
+        color: $lime;
+        text-shadow: black 1px 0 10px;
+        transform: scale(1.05);
+    }
+
+    .sun:active,
+    .moon:active {
+
+        transform: scale(0.95);
+    }
 }
 
 // Hamburger menu
 .hamburger__container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 2;
+    // position: fixed;
+    // top: 0;
+    // right: 0;
+    // z-index: 2;
 
     @media (min-width: 768px) {
         display: none;

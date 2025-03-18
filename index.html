@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MILO</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/scss/style.css">
     <script src="https://kit.fontawesome.com/a5e2ce1553.js" crossorigin="anonymous"></script>
@@ -12,42 +13,55 @@
 
 <body>
     <header>
-        <div class="theme-toggle__container">
-            <label class="srt">Theme: </label>
-            <select data-theme-picker name="themepicker" id="theme">
-                <option value="💻">System</option>
-                <option value="☀️"><i class="fa-solid fa-sun"></i></option>
-                <option value="🌑"><i class="fa-solid fa-moon"></i></option>
-                <option value="🙃">Don't pick</option>
-            </select>
-        </div>
-        <div class="hamburger__container">
-            <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="64" onclick="this.classList.toggle('active')">
-                <path class="line top"
-                    d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
-                <path class="line middle" d="m 30,50 h 40" />
-                <path class="line bottom"
-                    d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
-            </svg>
+        <div class="header__inner">
+            <div class="left-align">
+                <div class="logo__container">
+                    <a href="/index.html">
+                        <h1>MILO</h1>
+                    </a>
+                </div>
+            </div>
+
+            <div class="right-align">
+                <!-- Theme toggle for dark mode and light mode -->
+                <div class="theme-toggle__container">
+                    <label class="theme-switch" for="theme">
+                        <input type="checkbox" id="theme" />
+                        <div class="slider round"></div>
+                        <div class="toggle sun"><i class="fa-solid fa-sun"></i></div>
+                        <div class="toggle moon"><i class="fa-solid fa-moon"></i></div>
+                    </label>
+                    <em class="srt">Enable Dark Mode!</em>
+                </div>
+                <div class="hamburger__container">
+                    <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="64"
+                        onclick="this.classList.toggle('active')">
+                        <path class="line top"
+                            d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                        <path class="line middle" d="m 30,50 h 40" />
+                        <path class="line bottom"
+                            d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+                    </svg>
+                </div>
+            </div>
         </div>
     </header>
 
     <!--Fixed Position Backdrop -->
     <div class="backdrop">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path class="blob" fill="transparent"
                 d="M48.7,-54.7C62.2,-57.3,71.5,-41.8,65.3,-28.8C59,-15.8,37.3,-5.4,24.1,-0.6C10.9,4.1,6.2,3.1,3.6,5.1C1,7.1,0.5,12.2,-9,24.6C-18.6,37,-37.2,56.9,-52.4,59C-67.7,61,-79.6,45.4,-75.3,31C-71.1,16.5,-50.6,3.4,-42.4,-11.2C-34.1,-25.7,-38,-41.7,-32.9,-41.8C-27.9,-42,-13.9,-26.3,1.8,-28.9C17.6,-31.4,35.2,-52.1,48.7,-54.7Z"
                 transform="translate(100 100)" />
-        </svg>
+        </svg> -->
+        <span>M</span>
+        <span>I</span>
+        <span>L</span>
+        <span>O</span>
     </div>
 
 
     <div class="page-wrapper">
-        <div class="logo__container">
-            <a href="#">
-                <h1>MILO</h1>
-            </a>
-        </div>
         <!-- Sidenav -->
         <div class="sidebar">
             <div class="nav-menu__container">

@@ -25,8 +25,6 @@ textarea {
 
     .stroke {
         -webkit-text-stroke: 1.25px #aab2d1 !important;
-
-        .wide-el {}
     }
 
     .noise {
@@ -53,19 +51,7 @@ body {
     color: var(--color);
 }
 
-:root:has(#theme [value="☀️"]:checked) {
-    color-scheme: light;
-    --background-color: #f3f2f9;
-    --color: #606887;
-
-    .blob {
-        stroke: $azure !important;
-        fill: $spring-green !important;
-        opacity: .15 !important;
-    }
-}
-
-:root:has(#theme [value="🌑"]:checked) {
+:root:has(#theme:checked) {
     color-scheme: dark;
     --background-color: #2b2b33;
     --color: #f3f2f9;
@@ -103,25 +89,25 @@ main {
 }
 
 /* Backdrop Blob Container */
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+// .backdrop {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     pointer-events: none;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     overflow: hidden;
 
-    svg {
-        height: 100vh;
-        width: 100vw;
-        filter: blur(30px);
-        -webkit-filter: blur(30px);
-    }
-}
+//     svg {
+//         height: 100vh;
+//         width: 100vw;
+//         filter: blur(30px);
+//         -webkit-filter: blur(30px);
+//     }
+// }
 
 /* Blob Styling */
 .blob {
