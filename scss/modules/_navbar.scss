@@ -85,10 +85,6 @@ header {
 
 // Hamburger menu
 .hamburger__container {
-    // position: fixed;
-    // top: 0;
-    // right: 0;
-    // z-index: 2;
 
     @media (min-width: 768px) {
         display: none;
@@ -117,31 +113,31 @@ header {
     stroke-linecap: round;
 }
 
-.ham8 .top {
+.ham .top {
     stroke-dasharray: 40 160;
 }
 
-.ham8 .middle {
+.ham .middle {
     stroke-dasharray: 40 142;
     transform-origin: 50%;
     transition: transform 400ms;
 }
 
-.ham8 .bottom {
+.ham .bottom {
     stroke-dasharray: 40 85;
     transform-origin: 50%;
     transition: transform 400ms, stroke-dashoffset 400ms;
 }
 
-.ham8.active .top {
+.ham.active .top {
     stroke-dashoffset: -64px;
 }
 
-.ham8.active .middle {
+.ham.active .middle {
     transform: rotate(90deg);
 }
 
-.ham8.active .bottom {
+.ham.active .bottom {
     stroke-dashoffset: -64px;
 }
 
@@ -168,9 +164,6 @@ header {
         list-style: none;
         font-size: large;
         font-weight: 600;
-        // overflow: hidden;
-        // padding: 5px;
-
         @media (min-width: 1200px) {
             font-size: 1.75rem;
         }
