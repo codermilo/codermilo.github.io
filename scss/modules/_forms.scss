@@ -31,10 +31,6 @@ form {
         &:not(:placeholder-shown):invalid {
             outline-color: $flamingo;
         }
-
-        // &:focus:invalid {
-        //     outline-color: $lime;
-        // }
     }
 
     textarea {
