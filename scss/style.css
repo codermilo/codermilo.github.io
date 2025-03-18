@@ -88,7 +88,7 @@
 
 :root {
   --background-color: #f3f2f9;
-  --color: #606887 ;
+  --color: #606887;
 }
 
 * {
@@ -118,7 +118,7 @@ textarea {
     background-color: #aab2d1 !important;
     border-color: #aab2d1 !important;
   }
-  .blob {
+  .backdrop span h1 {
     stroke: #aab2d1 !important;
     fill: rgba(170, 178, 209, 0.2666666667) !important;
   }
@@ -150,6 +150,11 @@ body {
   stroke: #aab2d1 !important;
   fill: rgba(170, 178, 209, 0.2666666667) !important;
 }
+:root:has(#theme:checked) .backdrop span h1 {
+  background: -webkit-radial-gradient(rgba(170, 178, 209, 0.2666666667), #aab2d1);
+  -webkit-background-clip: text;
+  opacity: 0.45;
+}
 
 .page-wrapper {
   display: flex;
@@ -165,7 +170,6 @@ main {
   width: 100%;
 }
 
-/* Backdrop Blob Container */
 .backdrop {
   position: fixed;
   top: 0;
@@ -173,40 +177,38 @@ main {
   width: 100vw;
   height: 100vh;
   pointer-events: none;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.backdrop span {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
-.backdrop svg {
-  height: 100vh;
-  width: 100vw;
-  filter: blur(30px);
-  -webkit-filter: blur(30px);
-}
-
-/* Blob Styling */
-.blob {
-  fill: #ffb3c2;
-  stroke: #78ffd1;
-  stroke-linecap: round;
-  stroke-width: 2;
-  will-change: transform;
+.backdrop span h1 {
+  filter: blur(20px);
+  -webkit-filter: blur(20px);
+  font-size: 33vw;
+  margin: 0;
   animation: float 25s infinite alternate ease-in-out;
-  transform-origin: center;
-  opacity: 0.45;
+  background: #6A6F82;
+  background: radial-gradient(circle farthest-corner at right center, #6A6F82 0%, #AAB2D1 70%, #78FFD1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Floating Animation */
 @keyframes float {
   0% {
-    transform: scale(1.5) translate(65%, 50%) rotate(0);
+    transform: translate(0%, 0%) rotate(0);
   }
   50% {
-    transform: scale(1.55) translate(calc(60% - 10px), 50%) rotate(-5deg);
+    transform: translate(calc(0% - 10px), -10px) rotate(-5deg);
   }
   100% {
-    transform: scale(1.5) translate(65%, 50%) rotate(0);
+    transform: translate(0%, 0%) rotate(0);
   }
 }
 .sidebar {
