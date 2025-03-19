@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/scss/style.css">
     <script src="https://kit.fontawesome.com/a5e2ce1553.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-scss.min.js"></script>
+
 </head>
 
 <body>
@@ -101,9 +105,46 @@
         </div>
 
         <main>
-            <section id="hero" class="scs">
+            <section id="hero" class="scs code-examples">
                 <h1>
-                    <span class="stroke">Coming </span><span class="wide-el">Soon</span>
+                    <span class="stroke">Code </span><span class="wide-el">Samples</span>
+                </h1>
+                <h2>Sass - Color function</h2>
+                <pre><code class="language-scss">
+// Service functions
+@each $theme, $color in $ui-colors {
+    .service--#{$theme} {
+
+        .service__inner {
+            .icon-container {
+                background-color: $color;
+                border-color: $color;
+            }
+        }
+
+        &:hover {
+            .service__inner {
+                background-color: $color;
+                color: $color-white;
+
+                .icon-container {
+                    span {
+                        color: $color !important;
+                    }
+                }
+
+                [class^="btn--"],
+                button {
+                    color: $color ;
+                }
+            }
+        }
+    }
+}
+                    </code></pre>
+
+                <h1>
+                    <span class="wide-el">More </span><span class="stroke"> Coming Soon</span>
                 </h1>
             </section>
         </main>

@@ -1,5 +1,5 @@
 #hero {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -19,13 +19,16 @@
 
     @media (min-width: 458px) {
         padding: 0 5rem;
+
         h1 {
             font-size: 7vw;
         }
     }
 
     @media (min-width: 768px) {
-        padding: 0 7rem;
+        // padding: 0 7rem;
+        padding: 0 6rem;
+
         h1 {
             font-size: 7vw;
         }
@@ -39,5 +42,12 @@
         p {
             font-size: 2vw;
         }
+    }
+}
+
+.code-examples {
+    @media (max-width: 767px) {
+        padding: 0 1rem !important;
+        margin-top: 5rem;
     }
 }

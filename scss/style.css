@@ -199,6 +199,18 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.backdrop span:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.backdrop span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.backdrop span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.backdrop span:nth-child(4) {
+  animation-delay: 0.8s;
+}
 
 /* Floating Animation */
 @keyframes float {
@@ -611,7 +623,7 @@ header .header__inner .right-align {
 }
 
 #hero {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -637,7 +649,7 @@ header .header__inner .right-align {
 }
 @media (min-width: 768px) {
   #hero {
-    padding: 0 7rem;
+    padding: 0 6rem;
   }
   #hero h1 {
     font-size: 7vw;
@@ -649,6 +661,13 @@ header .header__inner .right-align {
   }
   #hero p {
     font-size: 2vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .code-examples {
+    padding: 0 1rem !important;
+    margin-top: 5rem;
   }
 }
 
@@ -687,6 +706,11 @@ header .header__inner .right-align {
   width: 100%;
   aspect-ratio: auto 1536/2560;
   height: 55vh;
+  overflow: hidden;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6156862745));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (min-width: 576px) {
   .project__container .project .pr-img {
@@ -698,15 +722,21 @@ header .header__inner .right-align {
     width: 50%;
   }
 }
-.project__container .project .pr-img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.project__container .project .pr-img img {
   height: 100%;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6156862745));
-  z-index: 0;
+  width: auto;
+  max-width: none;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.project__container .project .pr-img .mobile-img {
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 50%;
+  box-shadow: 10px 10px 25px 2px rgba(0, 0, 0, 0.51);
 }
 .project__container .project h2,
 .project__container .project h4 {
@@ -744,6 +774,40 @@ header .header__inner .right-align {
 @media (min-width: 1200px) {
   .project__container .project .pr-details .pr-description {
     max-width: 20vw;
+  }
+}
+
+pre[class*=language-] {
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 500px;
+  max-height: auto !important;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+pre[class*=language-] code {
+  display: block;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow: visible !important;
+  margin-inline: auto;
+}
+@media (min-width: 1200px) {
+  pre[class*=language-] code {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
 }
 
