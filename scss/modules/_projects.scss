@@ -142,6 +142,11 @@ pre[class*="language-"] {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.variable,
+.punctuation  {
+    color: var(--color) !important;
+}
+
 pre[class*="language-"] code {
     display: block;
     width: fit-content !important;
