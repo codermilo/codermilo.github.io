@@ -149,19 +149,7 @@ main {
 
 
 
-.sidebar {
-    width: 10rem;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-    display: none;
-    background-color: var(--background-color);
-}
+
 
 .page-wrapper {
     width: 100%;
@@ -170,19 +158,11 @@ main {
         main {
             margin-left: 10rem;
         }
-
-        .sidebar {
-            display: flex;
-        }
     }
 
     @media (min-width: 1200px) {
         main {
             margin-left: 15rem;
-        }
-
-        .sidebar {
-            width: 15rem;
         }
     }
 }
