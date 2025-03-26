@@ -8,8 +8,15 @@
     text-align: center;
     padding: 0 2rem;
 
+    .stroke .word {
+        overflow: hidden;
+    }
+
     .wide-el {
         transition: all 400ms ease;
+        overflow-y: hidden;
+        padding: 16px;
+        margin:-16px;
     }
 
     .wide-el:hover {
@@ -43,6 +50,19 @@
             font-size: 2vw;
         }
     }
+}
+
+.char,
+.word {
+    // position: absolute;
+    will-change: transform;
+}
+
+.word {
+    // overflow-y: hidden;
+    // overflow-x: visible;
+    // padding: 16px 0;
+    padding-bottom: 6px;
 }
 
 .code-examples {

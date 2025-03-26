@@ -114,21 +114,37 @@ main {
 
 
         h1 {
-            filter: blur(20px);
-            -webkit-filter: blur(20px);
-            font-size: 33vw;
+            filter: blur(1px);
+            -webkit-filter: blur(1px);
+            font-size: 66vw;
+            // font-size: 33vw;
             margin: 0;
             animation: float 25s infinite alternate ease-in-out;
-            background: #6A6F82;
-            background: radial-gradient(circle farthest-corner at right center, #6A6F82 0%, #AAB2D1 70%, #78FFD1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
+
         @for $i from 1 through 4 {
             &:nth-child(#{$i}) {
-                animation-delay: #{$i * 0.2}s;
+
+                @if $i ==4 {
+                    h1 {
+                        background: linear-gradient(palette($i), palette(1));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        animation-delay: #{$i * 0.5}s;
+                    }
+                }
+
+                @else {
+                    h1 {
+                        background: linear-gradient(palette($i), palette($i + 1));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        animation-delay: #{$i * 0.5}s;
+                    }
+                }
             }
         }
+
     }
 }
 
@@ -139,7 +155,7 @@ main {
     }
 
     50% {
-        transform: translate(calc(0% - 10px), -10px) rotate(-5deg);
+        transform: translate(calc(0% - 30px), -30px) rotate(-10deg);
     }
 
     100% {

@@ -2,7 +2,6 @@
 button {
     @extend %btn;
     transition: all .15s ease;
-    // @include bg-colors($ui-colors);
     &:hover {
         background-color: $lime;
         color: $black;

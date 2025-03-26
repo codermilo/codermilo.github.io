@@ -14,6 +14,16 @@
 //     @return map-get(map-get($palettes, $category), $theme);
 // }
 
+// Function to get the color value at a certain index of palette
+@function palette($index: 1) {
+    // Get a list of the keys
+    $keys: map-keys($palette);
+    // Get the key name at the given index
+    $key: nth($keys, $index);
+    // Return the value of the key at that given index
+    @return map-get($palette, $key);
+}
+
 // Service functions
 // @each $theme, $color in $ui-colors {
 //     .service--#{$theme} {
