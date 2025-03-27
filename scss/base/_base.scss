@@ -107,19 +107,11 @@ main {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 
-    span {
+    div {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-
-
-        h1 {
-            filter: blur(1px);
-            -webkit-filter: blur(1px);
-            font-size: 66vw;
-            // font-size: 33vw;
-            margin: 0;
-        }
 
         @for $i from 1 through 4 {
             &:nth-child(#{$i}) {
@@ -145,6 +137,22 @@ main {
                 }
             }
         }
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        h1 {
+            filter: blur(1px);
+            -webkit-filter: blur(1px);
+            font-size: 66vw;
+            // font-size: 33vw;
+            margin: 0;
+        }
+
 
     }
 }
@@ -163,6 +171,7 @@ main {
         transform: translate(0%, 0%) rotate(0);
     }
 }
+
 @keyframes float-2 {
     0% {
         transform: translate(0%, 0%) rotate(0);
@@ -176,6 +185,7 @@ main {
         transform: translate(0%, 0%) rotate(0);
     }
 }
+
 @keyframes float-3 {
     0% {
         transform: translate(0%, 0%) rotate(0);
@@ -189,7 +199,8 @@ main {
         transform: translate(0%, 0%) rotate(0);
     }
 }
-@keyframes float-4{
+
+@keyframes float-4 {
     0% {
         transform: translate(0%, 0%) rotate(0);
     }

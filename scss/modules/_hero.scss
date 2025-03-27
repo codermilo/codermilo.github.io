@@ -24,6 +24,10 @@
         text-shadow: black 2px 0 16px;
     }
 
+    p.anim__text {
+        overflow: hidden;
+    }
+
     @media (min-width: 458px) {
         padding: 0 5rem;
 

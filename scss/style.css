@@ -163,6 +163,40 @@ main {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
+.backdrop div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backdrop div:nth-child(1) h1 {
+  background: linear-gradient(#78ffd1, #f0ffa6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 1.5s;
+  animation: float-1 50s infinite alternate ease-in-out;
+}
+.backdrop div:nth-child(2) h1 {
+  background: linear-gradient(#f0ffa6, #99b9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 3s;
+  animation: float-2 50s infinite alternate ease-in-out;
+}
+.backdrop div:nth-child(3) h1 {
+  background: linear-gradient(#99b9ff, #ffb3c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 4.5s;
+  animation: float-3 50s infinite alternate ease-in-out;
+}
+.backdrop div:nth-child(4) h1 {
+  background: linear-gradient(#ffb3c2, #78ffd1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 6s;
+  animation: float-4 50s infinite alternate ease-in-out;
+}
 .backdrop span {
   display: flex;
   justify-content: center;
@@ -173,34 +207,6 @@ main {
   -webkit-filter: blur(1px);
   font-size: 66vw;
   margin: 0;
-}
-.backdrop span:nth-child(1) h1 {
-  background: linear-gradient(#78ffd1, #f0ffa6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation-delay: 1.5s;
-  animation: float-1 50s infinite alternate ease-in-out;
-}
-.backdrop span:nth-child(2) h1 {
-  background: linear-gradient(#f0ffa6, #99b9ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation-delay: 3s;
-  animation: float-2 50s infinite alternate ease-in-out;
-}
-.backdrop span:nth-child(3) h1 {
-  background: linear-gradient(#99b9ff, #ffb3c2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation-delay: 4.5s;
-  animation: float-3 50s infinite alternate ease-in-out;
-}
-.backdrop span:nth-child(4) h1 {
-  background: linear-gradient(#ffb3c2, #78ffd1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation-delay: 6s;
-  animation: float-4 50s infinite alternate ease-in-out;
 }
 
 /* Floating Animation */
@@ -349,12 +355,23 @@ a {
   z-index: 9999;
   display: flex;
   background-color: var(--background-color);
-  transition: transform 300ms ease-in-out;
+  transition: transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transform: translateX(-100%);
   border-right: 1px solid var(--color);
+  height: 100%;
+  flex-direction: column;
+  padding: 1rem;
 }
 .sidebar.open {
   transform: translateX(0);
+}
+.sidebar .wide-el {
+  transition: all 400ms ease;
+  overflow-y: hidden;
+  padding: 16px;
+  margin: -16px -16px calc(1.75rem - 16px) -16px;
+  padding: 8px;
+  margin: -8px -8px calc(1.75rem - 8px) -8px;
 }
 @media (min-width: 768px) {
   .sidebar {
@@ -367,6 +384,45 @@ a {
 @media (min-width: 1200px) {
   .sidebar {
     width: 15rem;
+  }
+}
+
+.social-links {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.25rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+.social-links div {
+  padding: 8px;
+  margin: -8px;
+  overflow: hidden;
+}
+.social-links a {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+}
+.social-links .fa-brands {
+  font-size: 2.5rem;
+  transition: all 0.15s ease;
+}
+.social-links .fa-brands:hover {
+  color: #f0ffa6;
+  text-shadow: black 1px 0 10px;
+}
+@media (min-width: 1200px) {
+  .social-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
   }
 }
 
@@ -491,17 +547,27 @@ header .header__inner .right-align {
 }
 .logo__container a {
   transition: all 150ms ease;
+  display: block;
+  height: 3rem;
+  overflow: hidden;
 }
 .logo__container a:hover {
   color: #f0ffa6;
   text-shadow: black 1px 0 10px;
 }
+.logo__container .words {
+  padding: 8px;
+  margin: -8px !important;
+}
 
 .theme-toggle__container {
   display: inline-block;
   font-size: x-large;
+  padding: 8px;
+  margin: -8px;
   margin-right: 1rem;
   padding-top: 1rem;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .theme-toggle__container {
@@ -592,12 +658,6 @@ header .header__inner .right-align {
   stroke-dashoffset: -64px;
 }
 
-.sidebar {
-  height: 100%;
-  flex-direction: column;
-  padding: 1rem;
-}
-
 .nav-menu__container {
   flex: 1;
   display: flex;
@@ -637,39 +697,6 @@ header .header__inner .right-align {
   transform: translateY(-100%);
 }
 
-.social-links {
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0.5rem;
-  grid-row-gap: 0.25rem;
-  width: -moz-fit-content;
-  width: fit-content;
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-}
-.social-links a {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.social-links .fa-brands {
-  font-size: 2.5rem;
-  transition: all 0.15s ease;
-}
-.social-links .fa-brands:hover {
-  color: #f0ffa6;
-  text-shadow: black 1px 0 10px;
-}
-@media (min-width: 1200px) {
-  .social-links {
-    display: flex;
-    gap: 0.5rem;
-    flex-direction: row;
-  }
-}
-
 #hero {
   min-height: 100vh;
   width: 100%;
@@ -692,6 +719,9 @@ header .header__inner .right-align {
 #hero .wide-el:hover {
   color: #f0ffa6 !important;
   text-shadow: black 2px 0 16px;
+}
+#hero p.anim__text {
+  overflow: hidden;
 }
 @media (min-width: 458px) {
   #hero {
