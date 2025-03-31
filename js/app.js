@@ -24,15 +24,14 @@ $('header').on('click', '.hamRotate', () => {
     const isTrue = $hamburger.hasClass("active");
     if (isTrue && $(window).width() < 768) {
         $menu.addClass('open');
+        $hamburger.addClass('active');
     } else {
         $menu.removeClass('open');
+        $hamburger.removeClass('active');
     }
 })
 
 /*--- Banner text animation using GSAP and Splitting.js ---*/
-// Splitting Banner text into chars
-Splitting();
-
 // Grabbing content that should be animated
 let DOM = {
     content: {
@@ -53,7 +52,7 @@ let DOM = {
 // Settings that every element will get
 const timelineSettings = {
     staggerValue: 0.004,
-    charsDuration: 1.25
+    charsDuration: .5
 };
 
 // On function call set up timeline and animate
@@ -90,205 +89,185 @@ function pageEnterAnimation() {
             x: 0,
             duration: 2.25
         })
-
-        .staggerTo(".anim__text .word > .char, .whitespace, .social-links a, .logo__container h1, .theme-toggle__container div", timelineSettings.charsDuration, {
+        .staggerTo(
+            ".anim__text .word > .char, .whitespace, .social-links a, .logo__container h1, .theme-toggle__container div",
+            timelineSettings.charsDuration, {
             ease: 'Expo.easeOut',
             y: '0%',
             opacity: 1
-        }, timelineSettings.staggerValue);
-
+        },
+            timelineSettings.staggerValue,
+            "-=1.75"
+        );
     // Play the animation
     tl.play();
+}
 
-};
 
 // Exit function 
 function pageLeaveAnimation() {
     return gsap.timeline()
         .to(".backdrop span", {
             ease: 'elastic.out(1,0.9)',
-            y: '-100%',
+            duration: 1.75,
+            x: (index) => (index % 2 === 0 ? '-100%' : '100%'),
+            y: (index) => (index < 2 ? '-100%' : '100%')
+        })
+        .staggerTo(
+            ".anim__text .word > .char, .whitespace, .social-links a, .logo__container h1, .theme-toggle__container div",
+            timelineSettings.charsDuration,
+            {
+                ease: 'Expo.easeIn',
+                y: '-100%',
+                opacity: 0
+            },
+            0.004,
+            "-=1.5"
+        );
+}
+
+// Homepage transitions for entering and leaving -- To unblur the backdrop
+
+// When exiting home, animate the backdrop from clear (no blur) to blurry.
+function homeExitAnimation() {
+    return gsap.timeline()
+        .to(".backdrop", {
+            filter: "blur(10px)",
+            duration: 0.75,
+            ease: "power2.out"
+        })
+        .to(".backdrop span", {
+            ease: 'elastic.out(1,0.9)',
+            duration: 1.75,
+            x: (index) => (index % 2 === 0 ? '-100%' : '100%'),
+            y: (index) => (index < 2 ? '-100%' : '100%')
+        })
+        .staggerTo(
+            ".anim__text .word > .char, .whitespace, .social-links a, .logo__container h1, .theme-toggle__container div",
+            timelineSettings.charsDuration,
+            {
+                ease: 'Expo.easeIn',
+                y: '-100%',
+                opacity: 0
+            },
+            0.004,
+            "-=1.5"
+        );
+}
+
+// When entering home, animate the backdrop from blurry to clear.
+function homeEnterAnimation() {
+    // First, animate the backdrop from blurry to clear.
+    // Adjust the blur values and duration as needed.
+    const tlBlur = gsap.timeline();
+    tlBlur.fromTo(
+        ".backdrop",
+        { filter: "blur(10px)" },
+        { filter: "blur(0px)", duration: 0.75, ease: "power2.out" }
+    );
+
+    // Set up text elements so they’re initially off-screen.
+    gsap.set(
+        ".anim__text .word > .char, .whitespace, .social-links a, .logo__container h1, .theme-toggle__container div",
+        { y: "-100%", opacity: 0 }
+    );
+
+    // Individually position backdrop chars (if needed for your Splitting.js setup)
+    gsap.set(DOM.content.backdrop.chars[0], { y: "-100%", x: "-100%" });
+    gsap.set(DOM.content.backdrop.chars[1], { y: "-100%", x: "100%" });
+    gsap.set(DOM.content.backdrop.chars[2], { y: "100%", x: "-100%" });
+    gsap.set(DOM.content.backdrop.chars[3], { y: "100%", x: "100%" });
+
+    // Create the timeline for the text animation.
+    let tlText = gsap.timeline();
+    tlText
+        .to(".backdrop span", {
+            ease: "elastic.out(1,0.9)",
+            y: "0%",
             x: 0,
             duration: 2.25
         })
-        .staggerTo(".anim__text .word > .char, .whitespace, .social-links a, .logo__container h1, .theme-toggle__container div", timelineSettings.charsDuration, {
-            ease: 'Expo.easeIn',
-            y: '-100%',
-            opacity: 0
-        }, 0.004);
+        .staggerTo(
+            ".anim__text .word > .char, .whitespace, .social-links a, .logo__container h1, .theme-toggle__container div",
+            timelineSettings.charsDuration,
+            {
+                ease: "Expo.easeOut",
+                y: "0%",
+                opacity: 1
+            },
+            timelineSettings.staggerValue,
+            "-=1.75" // Starts this tween 1.75 seconds before the previous one ends
+        );
+
+    // Combine the blur and text timelines in a master timeline.
+    const masterTl = gsap.timeline();
+    // Play the blur animation first...
+    masterTl.add(tlBlur);
+    // ...then start the text animation, overlapping by 0.5 seconds if desired.
+    masterTl.add(tlText, "-=0.5");
+
+    masterTl.play();
 }
+
+
+
+
 
 /*--- Page transition using Barba JS ---*/
-function pageTransition() {
-    var tl = gsap.timeline();
-
-    tl.to(".transition", {
-        duration: 1,
-        scaleY: 1,
-        transformOrigin: "bottom",
-        ease: "power4.inOut",
-    });
-
-    tl.to(".transition", {
-        duration: 1,
-        scaleY: 0,
-        transformOrigin: "top",
-        ease: "power4.inOut",
-        delay: 0.2,
-    });
-}
-
-function contentAnimation() {
-    var tl = gsap.timeline();
-    tl.to("h1", {
-        top: 0,
-        duration: 1,
-        ease: "power3.inOut",
-        delay: 0.75,
-    });
-}
-
-function delay(n) {
-    n = n || 0;
-    return new Promise((done) => {
-        setTimeout(() => {
-            done();
-        }, n);
-    });
-}
 
 barba.init({
-    sync: true,
     transitions: [
+        // Transition when leaving the home page (home -> any)
         {
+            name: 'home-exit',
+            from: { namespace: ['home'] },
             async leave(data) {
                 const done = this.async();
-
-                pageTransition();
-                await delay(1000);
-                done();
+                // Run the home exit animation (clear -> blur)
+                const tl = homeExitAnimation();
+                tl.eventCallback("onComplete", done);
             },
-
             async enter(data) {
-                contentAnimation();
-            },
-
-            async once(data) {
-                contentAnimation();
+                // For entering non-home pages, run your default page enter animation
+                Splitting();
+                homeEnterAnimation();
             },
         },
-    ],
-});
-
-/*--- Form validation using vanilla JS ---*/
-const form = document.querySelector("form");
-
-// Add event listener to my form for inputs
-// Define the regex once
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-form.addEventListener("input", (event) => {
-    const { name, value, id } = event.target;
-    const input = event.target;
-
-    switch (name) {
-        case "f-name":
-        case "l-name":
-        case "subject":
-        case "message":
-            if (value.trim() !== "") {
-                input.classList.add("valid");
-                input.classList.remove("invalid");
-            } else {
-                // input.classList.add("invalid");
-                input.classList.remove("valid");
-            }
-            break;
-        case "email":
-            if (value === "") {
-                input.classList.remove("valid", "invalid", "incomplete");
-            } else if (emailRegex.test(value)) {
-                input.classList.remove("invalid", "incomplete");
-                input.classList.add("valid");
-            } else {
-                input.classList.remove("valid", "invalid");
-                input.classList.add("incomplete");
-            }
-            break;
-        default:
-            console.log("nothing selected");
-    }
+        // Transition when entering the home page (any -> home)
+        {
+            name: 'home-enter',
+            to: { namespace: ['home'] },
+            async leave(data) {
+                // Run default leave animation for non-home pages
+                const done = this.async();
+                const tl = pageLeaveAnimation();
+                tl.eventCallback("onComplete", done);
+            },
+            async enter(data) {
+                // Run the home enter animation (blur -> clear)
+                const tl = homeEnterAnimation();
+                // You can chain additional animations here if needed (e.g., text in)
+            },
+        },
+        // Default transition for pages not involving home
+        {
+            name: 'default-transition',
+            async leave(data) {
+                const done = this.async();
+                const tl = pageLeaveAnimation();
+                tl.eventCallback("onComplete", done);
+            },
+            async enter(data) {
+                Splitting();
+                pageEnterAnimation();
+            },
+        },
+    ]
 });
 
 
-// Add event listener to my form for submit action
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    // List all inputs to check
-    const fName = document.querySelector("#first-name");
-    const lName = document.querySelector("#last-name");
-    const email = document.querySelector("#email");
-    const subject = document.querySelector("#subject");
-    const message = document.querySelector("#message");
-    const errorMessage = document.querySelector(".error-message");
 
-    // Set a state for if the formdata is valid
-    let isValid = true;
 
-    if (fName.value.trim() !== "") {
-        fName.classList.add("valid");
-    } else {
-        fName.classList.remove("valid", "incomplete");
-        fName.classList.add("invalid");
-        isValid = false;
-    }
-
-    if (lName.value.trim() !== "") {
-        lName.classList.add("valid");
-    } else {
-        lName.classList.remove("valid", "incomplete");
-        lName.classList.add("invalid");
-        isValid = false;
-    }
-
-    if (subject.value.trim() !== "") {
-        subject.classList.add("valid");
-    } else {
-        subject.classList.remove("valid", "incomplete");
-        subject.classList.add("invalid");
-        isValid = false;
-    }
-
-    if (message.value.trim() !== "") {
-        message.classList.add("valid");
-    } else {
-        message.classList.remove("valid", "incomplete");
-        message.classList.add("invalid");
-        isValid = false;
-    }
-
-    // Check if email is valid
-    if (emailRegex.test(email.value)) {
-        email.classList.remove("invalid", "incomplete");
-        email.classList.add("valid");
-    } else {
-        email.classList.remove("valid", "incomplete");
-        email.classList.add("invalid");
-        isValid = false;
-    }
-
-    // Prevent event action if formdata is invalid
-    if (!isValid) {
-        console.log("Contact form is not valid");
-        errorMessage.classList.add("show");
-        setTimeout(() => {
-            errorMessage.classList.remove("show");
-        }, 1500);
-    } else {
-        alert("Contact form submitted!");
-    }
-
-})
 /*--- Theme picker (saving to local storage) ---*/
 /*--- Cursor functionality using GSAP ---*/
 
