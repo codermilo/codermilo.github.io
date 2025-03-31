@@ -90,7 +90,7 @@
                     <li class="wide-el anim__text"><a data-splitting href="/about.html">About Me</a></li>
                     <li class="wide-el anim__text"><a data-splitting href="/examples.html">Code</a></li>
                     <li class="wide-el anim__text"><a data-splitting href="/scs.html">SCS Scheme</a></li>
-                    <li class="wide-el anim__text"><a data-splitting href="#contact">Contact Mee</a></li>
+                    <li class="wide-el anim__text"><a data-splitting href="#contact">Contact Me</a></li>
                 </ul>
             </div>
             <div class="social-links">
@@ -293,27 +293,29 @@
                         <div class="row">
                             <div class="form-group">
                                 <label class="srt" for="f-name">First Name</label>
-                                <input type="text" name="f-name" id="" required placeholder="First Name">
+                                <input type="text" name="f-name" id="first-name" placeholder="First Name">
                             </div>
                             <div class="form-group">
                                 <label class="srt" for="l-name">Last Name</label>
-                                <input type="text" name="l-name" id="" required placeholder="Last Name">
+                                <input type="text" name="l-name" id="last-name" placeholder="Last Name">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="srt" for="email">Email</label>
-                            <input type="email" name="email" id="email" required placeholder="Email">
+                            <input type="email" name="email" id="email" placeholder="Email">
                         </div>
                         <div class="form-group">
                             <label class="srt" for="subject">Subject</label>
-                            <input type="text" name="subject" id="subject" required placeholder="Subject">
+                            <input type="text" name="subject" id="subject" placeholder="Subject">
                         </div>
                         <div class="form-group">
                             <label class="srt" for="message">Message</label>
-                            <!-- <input type="textarea" name="message" id="message" required placeholder="Message" rows="5"> -->
-                            <textarea name="message" id="message" required rows="4" placeholder="Message"></textarea>
+                            <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
                         </div>
                         <button>Submit</button>
+                        <div class="error-message">
+                            <p>Please fill in all required fields!</p>
+                        </div>
                     </form>
                 </div>
 
