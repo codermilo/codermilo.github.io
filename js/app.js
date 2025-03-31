@@ -230,7 +230,7 @@ barba.init({
             async enter(data) {
                 // For entering non-home pages, run your default page enter animation
                 Splitting();
-                homeEnterAnimation();
+                pageEnterAnimation();
             },
         },
         // Transition when entering the home page (any -> home)
