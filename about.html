@@ -14,7 +14,7 @@
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
 </head>
 
-<body data-barba="wrapper">
+<body>
 
     <header>
         <div class="header__inner">
@@ -51,7 +51,29 @@
         </div>
     </header>
 
-
+    <!--Fixed Position Backdrop -->
+    <div class="backdrop">
+        <div>
+            <span>
+                <h1>M</h1>
+            </span>
+        </div>
+        <div>
+            <span>
+                <h1>I</h1>
+            </span>
+        </div>
+        <div>
+            <span>
+                <h1>L</h1>
+            </span>
+        </div>
+        <div>
+            <span>
+                <h1>O</h1>
+            </span>
+        </div>
+    </div>
 
     <div class="page-wrapper">
         <!-- Sidenav -->
@@ -97,31 +119,7 @@
             </div>
         </div>
 
-        <!--Fixed Position Backdrop -->
-        <div class="backdrop">
-            <div>
-                <span>
-                    <h1>M</h1>
-                </span>
-            </div>
-            <div>
-                <span>
-                    <h1>I</h1>
-                </span>
-            </div>
-            <div>
-                <span>
-                    <h1>L</h1>
-                </span>
-            </div>
-            <div>
-                <span>
-                    <h1>O</h1>
-                </span>
-            </div>
-        </div>
-
-        <main data-barba="container" data-barba-namespace="default">
+        <main>
             <section id="hero">
                 <h1>
                     <span class="stroke anim__text" data-splitting>About </span><span class="wide-el anim__text"
@@ -132,9 +130,7 @@
         </main>
     </div>
     <div class="noise"></div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/@barba/core"></script>
     <script src="/js/jquery-3.7.1.min.js"></script>
     <script src="/js/app.js"></script>
 </body>
