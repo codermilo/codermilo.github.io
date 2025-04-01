@@ -35,15 +35,10 @@ $('header').on('click', '.hamRotate', () => {
 Splitting();
 
 /*--- Banner text animation using GSAP and Splitting.js ---*/
-// Grabbing content that should be animated
+// Grabbing backdrop elements that should be animated
 let DOM = {
     content: {
-        home: {
-            section: document.querySelector('body'),
-            get chars() {
-                return this.section.querySelectorAll('.anim__text .word > .char, .whitespace, .social-links a, .logo__container h1, .theme-toggle__container div');
-            }
-        }, backdrop: {
+        backdrop: {
             section: document.querySelector('.backdrop'),
             get chars() {
                 return this.section.querySelectorAll('span');
@@ -106,13 +101,47 @@ function pageEnterAnimation() {
     tl.play();
 }
 
+// Call the page enter animation on page load
 pageEnterAnimation();
 
 
-
-
-
 /*--- Theme picker (saving to local storage) ---*/
+// Grab theme toggle button and state from local storage
+const $themeChecker = $('#theme');
+
+// Check local theme value and set $theme to checked if true
+$(document).ready(function () {
+    // Retrieve the stored theme
+    const storedTheme = window.localStorage.getItem('data-theme');
+    console.log("Stored theme:", storedTheme);
+
+    // Set the theme on the <html> element (or anywhere you need)
+    if (storedTheme) {
+        $('html').attr('data-theme', storedTheme);
+    }
+
+    // If you have a theme toggle checkbox, update its state based on the stored theme
+    if (storedTheme === 'dark') {
+        $('#theme').prop('checked', true);
+    } else {
+        $('#theme').prop('checked', false);
+    }
+});
+
+
+// Add event listener for user click on theme button
+$($themeChecker).on('click', () => {
+    console.log("$themeChecker[0].checked", $themeChecker[0].checked);
+    console.log("$themeChecker[0]", $themeChecker[0]);
+    if ($themeChecker[0].checked) {
+        // If checkbox value is true (dark theme enabled), then set data-theme to dark
+        window.localStorage.setItem('data-theme', 'dark');
+    } else {
+        window.localStorage.setItem('data-theme', 'light');
+    }
+    console.log("localTheme", window.localStorage.getItem('data-theme'));
+})
+
 /*--- Cursor functionality using GSAP ---*/
 
 
