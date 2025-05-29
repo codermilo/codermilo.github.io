@@ -10,7 +10,7 @@
 
         <div class="right-align">
             <!-- Theme toggle for dark mode and light mode -->
-            <?php require 'partials/themeToggle.php'
+            <?php require 'themeToggle.php'
             ?>
             <div class="hamburger__container">
                 <svg class="ham hamRotate" viewBox="0 0 100 100" width="64"

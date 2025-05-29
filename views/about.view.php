@@ -2,122 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MILO | About Me</title>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="/scss/style.css">
-    <script src="https://kit.fontawesome.com/a5e2ce1553.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
-    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <?php require 'partials/head.php'
+    ?>
 </head>
 
 <body>
 
-    <header>
-        <div class="header__inner">
-            <div class="left-align">
-                <div class="logo__container">
-                    <a class="anim__text" href="/index.html">
-                        <h1 data-splitting>MILO</h1>
-                    </a>
-                </div>
-            </div>
-
-            <div class="right-align">
-                <!-- Theme toggle for dark mode and light mode -->
-                <div class="theme-toggle__container">
-                    <label class="theme-switch" for="theme">
-                        <input type="checkbox" id="theme" />
-                        <!-- <div class="slider round"></div> -->
-                        <div class="toggle sun"><i class="fa-solid fa-sun"></i></div>
-                        <div class="toggle moon"><i class="fa-solid fa-moon"></i></div>
-                    </label>
-                    <em class="srt">Enable Dark Mode!</em>
-                </div>
-                <div class="hamburger__container">
-                    <svg class="ham hamRotate" viewBox="0 0 100 100" width="64"
-                        onclick="this.classList.toggle('active')">
-                        <path class="line top"
-                            d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
-                        <path class="line middle" d="m 30,50 h 40" />
-                        <path class="line bottom"
-                            d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php require 'partials/header.php'
+    ?>
 
     <!--Fixed Position Backdrop -->
-    <div class="backdrop">
-        <div>
-            <span>
-                <h1>M</h1>
-            </span>
-        </div>
-        <div>
-            <span>
-                <h1>I</h1>
-            </span>
-        </div>
-        <div>
-            <span>
-                <h1>L</h1>
-            </span>
-        </div>
-        <div>
-            <span>
-                <h1>O</h1>
-            </span>
-        </div>
-    </div>
+    <?php require 'partials/backdrop.php'
+    ?>
 
     <div class="page-wrapper">
         <!-- Sidenav -->
-        <div class="sidebar">
-            <div class="nav-menu__container">
-                <ul>
-                    <li class="wide-el anim__text"><a data-splitting href="/index.html">My Portfolio</a></li>
-                    <li class="wide-el anim__text"><a data-splitting href="/about.html">About Me</a></li>
-                    <li class="wide-el anim__text"><a data-splitting href="/examples.html">Code</a></li>
-                    <li class="wide-el anim__text"><a data-splitting href="/scs.html">SCS Scheme</a></li>
-                    <li class="wide-el anim__text"><a data-splitting href="/index.html#contact">Contact Me</a></li>
-                </ul>
-            </div>
-            <div class="social-links">
-                <div class="anim__text">
-                    <a href="#">
-                        <span>
-                            <i class="fa-brands fa-linkedin"></i>
-                        </span>
-                    </a>
-                </div>
-                <div class="anim__text">
-                    <a href="#">
-                        <span>
-                            <i class="fa-brands fa-square-github"></i>
-                        </span>
-                    </a>
-                </div>
-                <div class="anim__text">
-                    <a href="#">
-                        <span>
-                            <i class="fa-brands fa-square-twitter"></i>
-                        </span>
-                    </a>
-                </div>
-                <div class="anim__text">
-                    <a href="#">
-                        <span>
-                            <i class="fa-brands fa-square-facebook"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <?php require 'partials/sidebar.php'
+        ?>
 
         <main>
             <section id="hero">

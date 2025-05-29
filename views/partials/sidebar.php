@@ -1,11 +1,11 @@
 <div class="sidebar">
     <div class="nav-menu__container">
         <ul>
-            <li class="wide-el anim__text"><a data-splitting href="/index.html">My Portfolio</a></li>
-            <li class="wide-el anim__text"><a data-splitting href="/about.html">About Me</a></li>
-            <li class="wide-el anim__text"><a data-splitting href="/examples.html">Code</a></li>
-            <li class="wide-el anim__text"><a data-splitting href="/scs.html">SCS Scheme</a></li>
-            <li class="wide-el anim__text"><a data-splitting href="/index.html#contact">Contact Me</a></li>
+            <li class="wide-el anim__text"><a data-splitting href="/">My Portfolio</a></li>
+            <li class="wide-el anim__text"><a data-splitting href="/about">About Me</a></li>
+            <li class="wide-el anim__text"><a data-splitting href="/case-studies">Code</a></li>
+            <li class="wide-el anim__text"><a data-splitting href="/scs">SCS Scheme</a></li>
+            <li class="wide-el anim__text"><a data-splitting href="/#contact">Contact Me</a></li>
         </ul>
     </div>
     <div class="social-links">
