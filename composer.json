@@ -1,0 +1,17 @@
+{
+    "name": "dan_f/codermilo.github.io-1",
+    "autoload": {
+        "psr-4": {
+            "DanF\\CodermiloGithubIo1\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dan",
+            "email": "milocodes.io@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
