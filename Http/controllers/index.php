@@ -1,13 +1,9 @@
 <?php
 
-use Core\App;
-use Core\Database;
-
-$db = App::resolve(Database::class);
-
-// $articles = $db->query('select * from newsarticles')->get();
+use Core\Session;
 
 
 view("index.view.php", [
-    // 'articles' => $articles,
+    'errors' => Session::get('errors'),
+    'success' => Session::get(key: 'success') ?? null
 ]);

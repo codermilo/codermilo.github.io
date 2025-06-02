@@ -1,7 +1,6 @@
 <?php
 
 use Core\Database;
-use Core\Validator;
 use Core\App;
 use Core\Session;
 use Http\Forms\ContactForm;
@@ -13,21 +12,21 @@ $errors = [];
 // dd($_POST);
 
 // Get fields from post
-$name = $_POST['name'];
-$companyName = $_POST['companyName'];
+$fname = $_POST['f-name'];
+$lname = $_POST['l-name'];
 $email = $_POST['email'];
-$phone = $_POST['phone'];
+$subject = $_POST['subject'];
 $message = $_POST['message'];
 
 $form = new ContactForm();
 
-if ($form->validate($email, $phone, $message, $name)) {
+if ($form->validate($fname, $lname, $email, $subject, $message)) {
 
-    $db->query('INSERT INTO enquiries(name, companyName, email, phone, message) VALUES(:name, :companyName, :email, :phone, :message)', [
-        'name' => $name,
-        'companyName' => $companyName,
+    $db->query('INSERT INTO enquiry(fname, lname, email, subject, message) VALUES(:fname, :lname, :email, :subject, :message)', [
+        'fname' => $fname,
+        'lname' => $lname,
         'email' => $email,
-        'phone' => $phone,
+        'subject' => $subject,
         'message' => $message
     ]);
 
@@ -38,11 +37,12 @@ if ($form->validate($email, $phone, $message, $name)) {
 Session::flash('errors', $form->errors());
 
 Session::flash('old', [
-    'name' => $name,
-    'companyName' => $companyName,
+    'fname' => $fname,
+    'lname' => $lname,
     'email' => $email,
-    'phone' => $phone,
+    'subject' => $subject,
     'message' => $message
 ]);
 
-return redirect('/contact');
+
+return redirect('/#contact');

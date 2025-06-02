@@ -1,3 +1,9 @@
+// Function to remove alert messages from page
+$(document).on('click', '.alert-close', function () {
+    $(this).parent().remove();
+});
+
+
 /*--- Form validation using vanilla JS ---*/
 const form = document.querySelector("form");
 
@@ -41,7 +47,6 @@ form.addEventListener("input", (event) => {
 
 // Add event listener to my form for submit action
 form.addEventListener("submit", (event) => {
-    event.preventDefault();
     // List all inputs to check
     const fName = document.querySelector("#first-name");
     const lName = document.querySelector("#last-name");
@@ -97,13 +102,11 @@ form.addEventListener("submit", (event) => {
 
     // Prevent event action if formdata is invalid
     if (!isValid) {
+        event.preventDefault();
         console.log("Contact form is not valid");
         errorMessage.classList.add("show");
         setTimeout(() => {
             errorMessage.classList.remove("show");
         }, 1500);
-    } else {
-        alert("Contact form submitted!");
     }
-
 })

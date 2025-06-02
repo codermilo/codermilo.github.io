@@ -7,23 +7,27 @@ use Core\Validator;
 class ContactForm
 {
     protected $errors = [];
-    public function validate($email, $phone, $message, $name)
+    public function validate($fname, $lname, $email, $subject, $message )
     {
         // validate the form inputs
-        if (! Validator::string($name, 1, 255)) {
-            $this->errors['name'] = 'A valid name is required.';
+        if (! Validator::string($fname, 1, 50)) {
+            $this->errors['message'] = 'There was an error submitting your enquiry, please try again';
+        }
+        
+        if (! Validator::string($lname, 1, 50)) {
+            $this->errors['message'] = 'There was an error submitting your enquiry, please try again';
+        }
+
+        if (! Validator::string($subject, 5, 255)) {
+            $this->errors['message'] = 'There was an error submitting your enquiry, please try again';
         }
 
         if (! Validator::string($message, 5, 1000)) {
-            $this->errors['message'] = 'The message must be at least 5 characters.';
-        }
-
-        if (! Validator::phone($phone)) {
-            $this->errors['phone'] = 'The telephone format is incorrect.';
+            $this->errors['message'] = 'There was an error submitting your enquiry, please try again';
         }
 
         if (! Validator::email($email)) {
-            $this->errors['email'] = 'Please enter a valid email address.';
+            $this->errors['message'] = 'There was an error submitting your enquiry, please try again';
         }
 
         return empty($this->errors);

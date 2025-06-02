@@ -186,28 +186,40 @@
                     </div>
                     <!-- Contact Form -->
 
-                    <form action="#">
+                    <form method="POST" action="/enquiries">
+                        <div class="message-area">
+                            <?php if (!empty($success) && isset($success['message'])): ?>
+                                <div class="success">
+                                    <?= htmlspecialchars($success['message']) ?>
+                                    <button type="button" class="alert-close" aria-label="Close">&#x00D7;</button>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (isset($errors['message'])) : ?>
+                                <div class="error"><?= $errors['message'] ?> <button type="button" class="alert-close" aria-label="Close">&#x00D7;</button></div>
+                            <?php endif; ?>
+                        </div>
                         <div class="row">
                             <div class="form-group">
                                 <label class="srt" for="f-name">First Name</label>
-                                <input type="text" name="f-name" id="first-name" placeholder="First Name">
+                                <input type="text" name="f-name" id="first-name" placeholder="First Name" value="<?= old(key: 'fname') ?>">
                             </div>
                             <div class="form-group">
                                 <label class="srt" for="l-name">Last Name</label>
-                                <input type="text" name="l-name" id="last-name" placeholder="Last Name">
+                                <input type="text" name="l-name" id="last-name" placeholder="Last Name" value="<?= old(key: 'lname') ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="srt" for="email">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Email">
+                            <input type="email" name="email" id="email" placeholder="Email" value="<?= old(key: 'email') ?>">
                         </div>
                         <div class="form-group">
                             <label class="srt" for="subject">Subject</label>
-                            <input type="text" name="subject" id="subject" placeholder="Subject">
+                            <input type="text" name="subject" id="subject" placeholder="Subject" value="<?= old(key: 'subject') ?>">
                         </div>
                         <div class="form-group">
                             <label class="srt" for="message">Message</label>
-                            <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+                            <textarea name="message" id="message" rows="4" placeholder="Message"><?= old('message') ?></textarea>
                         </div>
                         <button>Submit</button>
                         <div class="error-message">

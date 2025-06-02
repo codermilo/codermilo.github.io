@@ -28,3 +28,40 @@ p {
         }
     }
 }
+
+.success {
+    display: block;
+    color: #fff;
+    background: #2ecc71;
+    border-color: #d6e9c6;
+}
+
+.error {
+    display: block;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+
+.success,
+.error {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+
+    button {
+        padding: 0;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        -webkit-appearance: none;
+        float: right;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        opacity: .2;
+    }
+}
