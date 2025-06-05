@@ -16,10 +16,11 @@ return [
         'password' => $_ENV['DB_PASSWORD']
     ],
 
-    'services' => [
-        'prerender' => [
-            'token' => '',
-            'secret' => ''
-        ]
+    'mailer' => [
+        'host' => $_ENV['MAIL_HOST'],
+        'SMTP_auth' => $_ENV['MAIL_SMTP_AUTH'],
+        'username' => $_ENV['MAIL_USERNAME'],
+        'password' => $_ENV['MAIL_PASSWORD'],
+        'port' => $_ENV['MAIL_PORT'],
     ]
 ];

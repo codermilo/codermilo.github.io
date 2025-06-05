@@ -4,6 +4,7 @@ use Core\Database;
 use Core\App;
 use Core\Session;
 use Http\Forms\ContactForm;
+use Core\Mailer;
 
 $db = App::resolve(Database::class);
 
@@ -31,6 +32,13 @@ if ($form->validate($fname, $lname, $email, $subject, $message)) {
     ]);
 
     Session::flash('success', ['message' => 'Your message has been sent!']);
+
+    $config = require base_path('config.php');
+
+    $mailer = new Mailer($config['mailer']);
+    $mailer->subject = $subject;
+    $mailer->body = $message;
+    $mailer->sendToSelf($email, $fname . $lname);
 }
 
 
