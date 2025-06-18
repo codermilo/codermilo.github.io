@@ -67,13 +67,17 @@
                         </div>
                         <div class="project__container">
                             <div class="project">
-                                <div class="pr-img"></div>
+                                <div class="pr-img">
+                                    <img src="/assets/images/projects/js-array-laptop-mockup.png"
+                                        alt="Netmatters homepage in large screen size">
+                                    <!-- <img class="mobile-img" src="/assets/images/projects/netmatters-homepage-mobile-clean.png" alt="Netmatters homepage in mobile screen size"> -->
+                                </div>
                                 <div class="pr-details">
                                     <div class="pr-title">
-                                        <h4>Project - Digital</h4>
+                                        <h4>Project - HTML, SCSS & JavaScript</h4>
                                     </div>
                                     <div class="pr-description">
-                                        <h2> 1: Netmatters Homepage</h2>
+                                        <h2> 2: JavaScript Array - <br>Image Gallery App</h2>
                                     </div>
                                     <div class="pr-link">
                                         <a href="#">
