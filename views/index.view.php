@@ -92,13 +92,16 @@
                         </div>
                         <div class="project__container">
                             <div class="project">
-                                <div class="pr-img"></div>
+                                <div class="pr-img">
+                                    <img src="/assets/images/projects/laravel-admin-dashboard-lg.png"
+                                        alt="Netmatters homepage in large screen size">
+                                </div>
                                 <div class="pr-details">
                                     <div class="pr-title">
-                                        <h4>Project - Digital</h4>
+                                        <h4>Project - Laravel, PHP & Tailwind</h4>
                                     </div>
                                     <div class="pr-description">
-                                        <h2> 1: Netmatters Homepage</h2>
+                                        <h2> 3: Laravel Admin Dashboard</h2>
                                     </div>
                                     <div class="pr-link">
                                         <a href="#">
